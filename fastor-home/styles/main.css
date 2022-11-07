@@ -1,0 +1,89 @@
+@import url("./header.css");
+@import url("./hero.css");
+@import url("./features.css");
+@import url("./storeNeed.css");
+@import url("./steps.css");
+@import url("./reviews.css");
+@import url("./footer.css");
+@import url("./accouncement.css");
+
+
+html{
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Titillium Web", sans-serif;
+  background: #ffffff;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  /* max-width: 1400px; */
+}
+.custom_container{
+  max-width: 1400px;
+  margin: 0 auto;
+  /* padding: 0 2rem; */
+}
+.btn{
+    padding: .75rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    font-size:var(--text-small);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color:var(--color-brand);
+    background: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-primary{
+    background:var(--color-orange-gradient);
+    color: #fff;
+}
+
+.btn-secondary{
+    color:var(--color-brand);
+    background: #fff;
+}
+a{
+  text-decoration: none;
+}
+.flex_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 920px) {
+.btn{
+    padding: .5rem .8rem;
+    font-size:var(--text-xsmall);
+    min-width: fit-content;
+}
+
+.flex_center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+}
+:root {
+  --color-text: #232f3e;
+  --color-brand:#FF681A;
+  --color-border:#C1C1C1;
+  --color-orange-gradient:linear-gradient(180deg, #EE8425 0%, #FF661A 100%);;
+  --secondary-color: #fff;
+  --primary-font: "Titillium Web", sans-serif;
+  --text-xsmall: 0.75rem;
+  --text-small: 1rem;
+  --text-low-medium: 1.25rem;
+  --text-medium: 1.5rem;
+  --text-large: 2rem;
+  --text-xlarge: 2.5rem;
+  --text-xxlarge: 3rem;
+  --text-xxxlarge: 3.5rem;
+}
