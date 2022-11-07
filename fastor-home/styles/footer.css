@@ -97,6 +97,9 @@
   opacity: 0.2;
   z-index: -1; 
 }
+.marginScalingImg{
+  margin-bottom: -2%;
+}
 .footer__left {
   display: flex;
   flex-direction: column;
@@ -163,6 +166,10 @@
 @media (max-width: 920px) {
   .footer__right_mobile{
     display: flex;
+  }
+  .marginScalingImg
+  {
+    margin-bottom: -5rem;
   }
   #errortext{
   font-size: var(--text-xsmall);

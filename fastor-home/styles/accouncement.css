@@ -3,8 +3,8 @@
     background-color:#3F4255;
     background-image: linear-gradient(to right, #FF4D4D, #8B31AB);
     margin:0% auto;
-    /* padding:0.5rem; */
-
+    padding:0.1rem;
+    /* height:54px; */
     display:flex;
     justify-content: center;
     gap:40px;
@@ -20,7 +20,7 @@
     margin-right: 1rem;
     vertical-align:middle;
     height:80%;
-    width:5%;
+    width:6%;
     /* width:80%; */
 }
 

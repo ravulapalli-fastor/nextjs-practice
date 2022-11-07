@@ -52,6 +52,9 @@ import stepsImg3 from "../public/stepsImg3.svg";
 import stepsImg2 from "../public/stepsImg2.svg";
 import stepsImg1 from "../public/stepsImg1.svg";
 
+import LeftArrowIconImg from "../public/LeftArrowIconImg.png";
+import RightArrowIconImg from "../public/RightArrowIconImg.png";
+
 // import heroSideAnimation from "../public/heroSideAnimation.svg";
 
 export default function Home(){
@@ -326,7 +329,7 @@ const scrollDir=() =>{
               <Link  href="https://becho.fastor.ai/">
                 <button id="header__btn_id" class="btn btn-primary">
                   Get Started
-                  <Image style="display: inline-block; margin-left: 0.5rem" 
+                  <Image style={{display: "inline-block", marginLeft: "0.5rem"}} 
                   src={rightArrow} 
                   alt="arrow-right"/></button>
                </Link>
@@ -395,7 +398,7 @@ const scrollDir=() =>{
            <div class="features__row">
                 <div class="features__card">
                 <Image  class="features__card_img" src={fetureIcon1} 
-                width="100" height="100" 
+                 
                 alt="feature"/>
                 <h3 class="features__card_title">QR Ordering</h3>
               </div>
@@ -416,7 +419,7 @@ const scrollDir=() =>{
             
             <div class="features__row">
                <div class="features__card">
-                 <img class="features__card_img" src={fetureIcon5} alt="feature"/>
+                 <Image class="features__card_img" src={fetureIcon5} alt="feature"/>
                  <h3 class="features__card_title">Online Store</h3>
                </div>
                <div class="features__card">
@@ -446,7 +449,7 @@ const scrollDir=() =>{
       {/* <!-- features section end --> */}
       {/* <!-- store need start -->*/}
       <section class="">
-        <Image style="width: 100%; margin-bottom: -1rem" src={storeNeedUp} alt=""/>
+        <Image style={{width: "100%", marginBottom: "-1rem"}} src={storeNeedUp} alt=""/>
         <div class="storeNeed__container">
           <h1 class="storeNeed__heading">Get The Store You Need</h1>
           <p class="storeNeed__description">
@@ -456,14 +459,19 @@ const scrollDir=() =>{
           </p>
           <Link  href="https://becho.fastor.ai/"><button id="storeNeed__get_started_id" class="btn btn-primary">
               Get Started
-              <Image style="display: inline-block; margin-left: 0.5rem" src={rightArrow} alt="arrow-right"/></button></Link>
+              <Image style={{display: "inline-block", marginLeft: "0.5rem"}} src={rightArrow} alt="arrow-right"/></button></Link>
 
           <div class="storeNeed__card_main_container">
             <div class="storeNeed__next_btn" id="storeNeed__next_btnId" onClick={()=>scrollRightOnClicked('storeNeed__card_container')}>
-              <i style={{marginLeft: "-0.2rem"}} class="fa fa-angle-left"></i>
+              <i style={{marginLeft: "-0.2rem"}} className="fa fa-angle-left">
+                <Image src={LeftArrowIconImg}/>
+              </i>
             </div>
             <div class="storeNeed__prev_btn" id="storeNeed__prev_btnId" onClick={()=>scrollLeftOnClicked('storeNeed__card_container')}>
-              <i style={{marginRight: "-0.2rem"}} class="fa fa-angle-right"></i>
+              <i style={{marginRight: "-0.2rem"}} className="fa fa-angle-right">
+              <Image src={RightArrowIconImg}/>
+
+              </i>
             </div>
             <div class="storeNeed__card_container">
               <div class="storeNeed__card">
@@ -789,10 +797,14 @@ const scrollDir=() =>{
 
           <div class="reviews__card_main_container">
             <div class="reviews__next_btn" onClick={()=>scrollLeftOnClicked('reviews__card_container')}>
-              <i style={{marginLeft: "-0.2rem"}} class="fa fa-angle-left">N</i>
+              <i style={{marginLeft: "-0.2rem"}} class="fa fa-angle-left">
+                <Image src={LeftArrowIconImg}/>
+              </i>
             </div>
             <div class="reviews__prev_btn" onClick={()=>scrollRightOnClicked('reviews__card_container')}/>
-              <i style={{marginRight: "-0.2rem"}} class="fa fa-angle-right">P</i>
+              <i style={{marginRight: "-0.5rem"}} class="fa fa-angle-right">
+                <Image src={RightArrowIconImg}/>
+              </i>
             </div>
 
             <div class="reviews__card_container">
@@ -917,7 +929,7 @@ const scrollDir=() =>{
 
     {/* <!--footer start--> */}
     <footer>
-      <Image style={{width: "100%", marginBottom: "-1rem"}} src={footerUp} alt="steps"/>
+      <Image style={{width: "100%"}} class="marginScalingImg" src={footerUp} alt="steps"/>
 
       <div class="footer__container">
         <div class="footer__bg_wrapper"></div>
