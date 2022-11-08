@@ -49,7 +49,7 @@
   width: 3rem;
   height: 3rem;
   left: 35rem;
-  top: 18rem;
+  top: 17rem;
   /* margin:auto; */
   transform: translateY(-50%);
   z-index: 2;
@@ -67,7 +67,7 @@
   width: 3rem;
   height: 3rem;
   right: 34rem;
-  top: 18rem;
+  top: 17rem;
   transform: translateY(-50%);
   z-index: 2;
   color: var(--color-brand);
@@ -89,7 +89,9 @@
     animation: nextBtn 1s infinite;
 }
 .reviews__prev_btn::after{
-    content: "";
+    content: "<";
+    text-align:center;
+    margin-top:0.1rem;
     position: absolute;
     width: 98%;
     height: 98%;
@@ -188,7 +190,6 @@
 }
 .reviews__card_main_container{
   display:none;
-  opacity:0
 }
 .reviews__card_mobile_view{
   display:block;

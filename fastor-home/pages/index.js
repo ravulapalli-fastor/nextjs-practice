@@ -56,6 +56,7 @@ import LeftArrowIconImg from "../public/LeftArrowIconImg.png";
 import RightArrowIconImg from "../public/RightArrowIconImg.png";
 
 import Media from "react-media";
+import ReviewMobile from "./reviewMobile";
 
 // import heroSideAnimation from "../public/heroSideAnimation.svg";
 
@@ -87,6 +88,111 @@ export default function Home(){
 
 
 },[]);
+
+useEffect(()=>{
+
+window.addEventListener("scroll", function () {
+  const ele_build = document.getElementById("steps__build_desktop");
+  const ele_manage = document.getElementById("steps__manage_desktop");
+  const ele_scale = document.getElementById("steps__scale_desktop");
+  const ele_build_mobile = document.getElementById("steps__build_mobile");
+  const ele_manage_mobile = document.getElementById(
+    "steps__manage_mobile"
+  );
+  const ele_scale_mobile = document.getElementById("steps__scale_mobile");
+
+  const scroll_direction = scrollDir();
+  var animation_class = "";
+  if (scroll_direction == "up") {
+    animation_class = "fadeUp__animation";
+  } else {
+    animation_class = "fadeDown__animation";
+  }
+
+  if (isInViewport(ele_build) || isInViewport(ele_build_mobile)) {
+    document
+      .querySelector(".steps__build_btn")
+      .classList.add("steps__active");
+    document
+      .querySelector(".steps__manage_btn")
+      .classList.remove("steps__active");
+    document
+      .querySelector(".steps__scale_btn")
+      .classList.remove("steps__active");
+    document
+      .querySelector(".steps__build_btn_mob")
+      .classList.add("steps__active");
+    document
+      .querySelector(".steps__manage_btn_mob")
+      .classList.remove("steps__active");
+    document
+      .querySelector(".steps__scale_btn_mob")
+      .classList.remove("steps__active");
+    // animation
+    ele_build.classList.add(animation_class);
+    ele_scale.classList.remove("fadeUp__animation","fadeDown__animation");
+    ele_manage.classList.remove("fadeUp__animation","fadeDown__animation");
+    ele_build_mobile.classList.add(animation_class);
+    ele_scale_mobile.classList.remove("fadeUp__animation","fadeDown__animation");
+    ele_manage_mobile.classList.remove("fadeUp__animation","fadeDown__animation");
+  } else if (
+    isInViewport(ele_manage) ||
+    isInViewport(ele_manage_mobile)
+  ) {
+    document
+      .querySelector(".steps__manage_btn")
+      .classList.add("steps__active");
+    document
+      .querySelector(".steps__scale_btn")
+      .classList.remove("steps__active");
+    document
+      .querySelector(".steps__build_btn")
+      .classList.remove("steps__active");
+    document
+      .querySelector(".steps__manage_btn_mob")
+      .classList.add("steps__active");
+    document
+      .querySelector(".steps__scale_btn_mob")
+      .classList.remove("steps__active");
+    document
+      .querySelector(".steps__build_btn_mob")
+      .classList.remove("steps__active");
+    // animation
+    ele_manage.classList.add(animation_class);
+    ele_build.classList.remove("fadeUp__animation","fadeDown__animation");
+    ele_scale.classList.remove("fadeUp__animation","fadeDown__animation");
+    ele_manage_mobile.classList.add(animation_class);
+    ele_build_mobile.classList.remove("fadeUp__animation","fadeDown__animation");
+    ele_scale_mobile.classList.remove("fadeUp__animation","fadeDown__animation");
+  } else if (isInViewport(ele_scale) || isInViewport(ele_scale_mobile)) {
+    document
+      .querySelector(".steps__scale_btn")
+      .classList.add("steps__active");
+    document
+      .querySelector(".steps__manage_btn")
+      .classList.remove("steps__active");
+    document
+      .querySelector(".steps__build_btn")
+      .classList.remove("steps__active");
+    document
+      .querySelector(".steps__scale_btn_mob")
+      .classList.add("steps__active");
+    document
+      .querySelector(".steps__manage_btn_mob")
+      .classList.remove("steps__active");
+    document
+      .querySelector(".steps__build_btn_mob")
+      .classList.remove("steps__active");
+    // animation
+    ele_scale.classList.add(animation_class);
+    ele_manage.classList.remove("fadeUp__animation","fadeDown__animation");
+    ele_build.classList.remove("fadeUp__animation","fadeDown__animation");
+    ele_scale_mobile.classList.add(animation_class);
+    ele_manage_mobile.classList.remove("fadeUp__animation","fadeDown__animation");
+    ele_build_mobile.classList.remove("fadeUp__animation","fadeDown__animation");
+  }
+});
+},[])
 
 const isInViewport=(element)=> {
   const rect = element.getBoundingClientRect();
@@ -795,12 +901,12 @@ const scrollDir=() =>{
           <h1 class="reviews__heading">
             Here’s what your fellow Business Owners have to say..
           </h1>
-
-          {/* <Media query="(max-width:920px)">
-            {(matches)=>(
-              matches? "Hi":"Hello"
-            )}
-          </Media> */}
+         
+         {/* <Media query="(max-width:920px)">
+          {(matches)=>(
+            matches?<ReviewMobile/>:"Hello desktop"
+          )}
+         </Media> */}
 
           <div class="reviews__card_main_container">
             <div class="reviews__next_btn" onClick={()=>scrollLeftOnClicked('reviews__card_container')}>
@@ -873,6 +979,7 @@ const scrollDir=() =>{
 
           </div>
           {/* <!--- mobile view start--> */} 
+  
           {/* <div class="reviews__card_mobile_view">
             <div class="reviews__card_mobile_container"></div>
             <div style={{textAlign:"center"}}>
@@ -881,16 +988,17 @@ const scrollDir=() =>{
               <span class="dot" onClick={()=>displayReviewCard(2)}></span>
              </div>
           </div> */}
+
           {/* <!--- mobile view end--> */}
-        {/* </div> */}
-        <Image style={{width: "100%", marginTop: "-0.5rem"}} src={reviewsDown} alt=""/>
+        </div>
+        <Image style={{width: "100%", marginTop: "-1.5rem"}} src={reviewsDown} alt=""/>
        {/* </section> */}
       {/* // {/* <!-- reviews section end --> */}
 
 
        {/* <!-- contact form start --> */}
 
-      </div>
+      {/* </div> */}
     <section id="form-section">
       <div class="footer__contact_container">
         <div class="custom_container flex_center">
