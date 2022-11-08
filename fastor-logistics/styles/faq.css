@@ -1,0 +1,44 @@
+.faq__main_container{
+    padding-bottom: 5%;
+}
+
+.faq__inner_container{
+    display:flex;
+    gap:2%;
+    flex-wrap: wrap;
+    width:95%;
+    margin:auto;
+    justify-content: center;
+}
+.faq__card_container{
+    /* border:1px solid purple; */
+    width:max(40%,566px);
+    /* height:122px; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:5%;
+    font-size: var(--text-small);
+    color:#54585F;
+    margin-top: 2%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 20px rgba(8, 15, 52, 0.12);
+    border-radius: 12px;
+    padding:2%
+}
+
+.faq__card_title{
+    width:75%;
+}
+
+/* mobile responsive */
+@media (max-width: 920px) {
+    .faq__inner_container{
+        display:block;
+        width:90%;
+    }
+    .faq__card_container{
+        width:95%;
+        font-size: var(--text-xsmall);
+    }
+}
