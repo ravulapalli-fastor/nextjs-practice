@@ -11,8 +11,6 @@ export default function Home(){
           Products
           </Link> 
         </header>
-        <h1>Welcome to Nextjs </h1>
-        <h3>Project1</h3>
     </div>
    )
 }
