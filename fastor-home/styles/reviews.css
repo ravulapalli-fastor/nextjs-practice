@@ -48,8 +48,8 @@
   position: absolute;
   width: 3rem;
   height: 3rem;
-  left: 7rem;
-  top: 50%;
+  left: 35rem;
+  top: 18rem;
   /* margin:auto; */
   transform: translateY(-50%);
   z-index: 2;
@@ -66,8 +66,8 @@
   position: absolute;
   width: 3rem;
   height: 3rem;
-  right: 7rem;
-  top: 50%;
+  right: 34rem;
+  top: 18rem;
   transform: translateY(-50%);
   z-index: 2;
   color: var(--color-brand);
@@ -78,6 +78,7 @@
   align-items: center;
   cursor: pointer;
 }
+
 .reviews__next_btn::after{
     content: "";
     position: absolute;
@@ -186,11 +187,12 @@
     padding: 0 1rem;
 }
 .reviews__card_main_container{
-  /* display:none; */
+  display:none;
   opacity:0
 }
 .reviews__card_mobile_view{
   display:block;
+  position:relative;
 }
 .reviews__next_btn{
   display: none;

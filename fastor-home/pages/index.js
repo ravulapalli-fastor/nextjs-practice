@@ -55,6 +55,8 @@ import stepsImg1 from "../public/stepsImg1.svg";
 import LeftArrowIconImg from "../public/LeftArrowIconImg.png";
 import RightArrowIconImg from "../public/RightArrowIconImg.png";
 
+import Media from "react-media";
+
 // import heroSideAnimation from "../public/heroSideAnimation.svg";
 
 export default function Home(){
@@ -266,7 +268,7 @@ const scrollDir=() =>{
   //   .append(reviews_card_cont);
   // }
   
-  // // displayReviewCard(0);
+  // displayReviewCard(0);
 
 
     return (
@@ -636,7 +638,6 @@ const scrollDir=() =>{
           </div>
           <div id="steps__scale_desktop" class="steps__desktop_container">
             {/* <!-- first card start --> */}
-            {console.log("build")}
 
             <div class="steps__desktop_card">
               <div class="steps__desktop_card_left">
@@ -710,7 +711,7 @@ const scrollDir=() =>{
           </div>
           <div id="steps__manage_mobile" class="steps__mobile_container">
             <div class="steps__mobile_card">
-              <Image src={{stepsManageImg1}} alt="step1"/>
+              <Image src={stepsManageImg1} alt="step1"/>
               <label for="step1">Step-1</label>
               <h2>Share Your Store’s Link</h2>
               <p>
@@ -719,7 +720,7 @@ const scrollDir=() =>{
               </p>
             </div>
             <div class="steps__mobile_card">
-              <Image src={{stepsManageImg2}} alt="step2"/>
+              <Image src={stepsManageImg2} alt="step2"/>
               <label for="step2">Step-2</label>
               <h2>Get Online Orders</h2>
               <p>
@@ -788,23 +789,29 @@ const scrollDir=() =>{
 
       
       {/* <!-- reviews section start --> */}
-      {/* <Section> */}
-      <Image style={{width: "100%", marginBottom: "-1rem"}} src={reviewsUP} alt=""/>
+      {/* <section> */}
+      <Image style={{width: "100%", marginBottom: "-5rem"}} src={reviewsUP} alt=""/>
         <div class="reviews__container">
           <h1 class="reviews__heading">
             Here’s what your fellow Business Owners have to say..
           </h1>
 
+          {/* <Media query="(max-width:920px)">
+            {(matches)=>(
+              matches? "Hi":"Hello"
+            )}
+          </Media> */}
+
           <div class="reviews__card_main_container">
             <div class="reviews__next_btn" onClick={()=>scrollLeftOnClicked('reviews__card_container')}>
-              <i style={{marginLeft: "-0.2rem"}} class="fa fa-angle-left">
-                <Image src={LeftArrowIconImg}/>
-              </i>
+              {/* <li style={{marginLeft: "-0.2rem"}} class="fa fa-angle-left"> */}
+                <Image src={RightArrowIconImg} />
+              {/* </li> */}
             </div>
             <div class="reviews__prev_btn" onClick={()=>scrollRightOnClicked('reviews__card_container')}/>
-              <i style={{marginRight: "-0.5rem"}} class="fa fa-angle-right">
-                <Image src={RightArrowIconImg}/>
-              </i>
+              <li style={{marginRight: "-0.5rem"}} class="fa fa-angle-right">
+                <Image src={LeftArrowIconImg} />
+              </li>
             </div>
 
             <div class="reviews__card_container">
@@ -875,13 +882,14 @@ const scrollDir=() =>{
              </div>
           </div> */}
           {/* <!--- mobile view end--> */}
-        {/* </div>
-        <Image style={{width: "100%", marginTop: "-0.5rem"}} src={reviewsDown} alt=""/> */}
-       {/* </Section> */}
-      {/* <!-- reviews section end -->
+        {/* </div> */}
+        <Image style={{width: "100%", marginTop: "-0.5rem"}} src={reviewsDown} alt=""/>
+       {/* </section> */}
+      {/* // {/* <!-- reviews section end --> */}
 
 
-      {/* <!-- contact form start --> */}
+       {/* <!-- contact form start --> */}
+
       </div>
     <section id="form-section">
       <div class="footer__contact_container">
@@ -1000,8 +1008,7 @@ const scrollDir=() =>{
       <p class="footer__copyright">Copyright 2022</p>
     </footer>
     {/* <!-- foooter end --> */}
-
-    </>
+     </>
     )
     
       }
