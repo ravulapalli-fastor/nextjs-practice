@@ -6,27 +6,28 @@ import { useEffect } from "react"
 
 export default function ReviewMobile(){
 
-//         var reviews_data_obj=
-//     [
-//         {
-//         description:"Fastor is a one stop solution for all your business needs. They have helped me to grow my business exponentially and now I am able to reach more customers.",
-//         title:"Nikhil Athani",
-//         sub_title:"Electronics Shop",
-//         image:reviewImage1
-//         },
-//         {
-//         "description":"Never knew that taking my grocery business online will be this quick and easy. The Fastor team assisted with everything and now I sell online too.They have definitely added so much value to my small offline business.",
-//         "title":"Mohit Pau",
-//         "sub_title":"Grocery Shop Owner",
-//         "image":reviewImage2
-//         },
-//         {
-//         "description":"I could not imagine that selling online would be this easy. Was able to launch my website within the same day.Great experience with Fastor.",
-//         "title":"Veer Vaddar",
-//         "sub_title":" Clothing Shop",
-//         "image":reviewImage3
-//         }
-//    ]
+        var reviews_data_obj=
+    [
+        {
+        description:"Fastor is a one stop solution for all your business needs. They have helped me to grow my business exponentially and now I am able to reach more customers.",
+        title:"Nikhil Athani",
+        sub_title:"Electronics Shop",
+        image:reviewImage1
+        },
+        {
+        "description":"Never knew that taking my grocery business online will be this quick and easy. The Fastor team assisted with everything and now I sell online too.They have definitely added so much value to my small offline business.",
+        "title":"Mohit Pau",
+        "sub_title":"Grocery Shop Owner",
+        "image":reviewImage2
+        },
+        {
+        "description":"I could not imagine that selling online would be this easy. Was able to launch my website within the same day.Great experience with Fastor.",
+        "title":"Veer Vaddar",
+        "sub_title":" Clothing Shop",
+        "image":reviewImage3
+        }
+   ]
+
 //    var displayReviewCard;
 //   useEffect(()=>{
 //    const displayReviewCard=(index)=>{
@@ -67,13 +68,26 @@ export default function ReviewMobile(){
 //   },[])
 // displayReviewCard(0);
 
+const displayReviewCard=()=>{
+    console.log("hi")
+    let prev=reviews_data_obj.pop();
+    reviews_data_obj.unshift(prev);
+}
+
     return (
           <div class="reviews__card_mobile_view">
-            <div class="reviews__card_mobile_container">hi</div>
+            <div class="reviews__card_mobile_container">
+                <div class="reviews__card">
+                    <p>{reviews_data_obj[0].description}</p>
+                    <Image src={`/${reviews_data_obj[0].image}.png`} width="50" height="50" alt="" class="reviews__card_img"/>
+                    <h3>{reviews_data_obj[0].title}</h3>
+                    <p>{reviews_data_obj[0].sub_title}</p>
+                </div>
+            </div>
             <div style={{textAlign:"center"}}>
-              <span class="dot" onClick={()=>displayReviewCard(0)}></span>
-              <span class="dot" onClick={()=>displayReviewCard(1)}></span>
-              <span class="dot" onClick={()=>displayReviewCard(2)}></span>
+              <span class="dot" onClick={()=>displayReviewCard()}></span>
+              <span class="dot" onClick={()=>displayReviewCard()}></span>
+              <span class="dot" onClick={()=>displayReviewCard()}></span>
              </div>
           </div>
         // <h1>Hi hello</h1>
