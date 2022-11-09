@@ -1,6 +1,7 @@
 .logistics__inner_container{
     /* border:1px solid red; */
     margin:auto;
+    width:85%;
     display:flex;
     justify-content: space-between;
     height:fit-content
@@ -27,7 +28,7 @@
 
 
 .benefits_card_main_container{
-    width:90%;
+    width:85%;
     /* border:1px solid red; */
     margin:auto;
     height:max-content;
@@ -86,6 +87,7 @@
 .benefits_card_data_description{
     color: #7B7D8A;
     font-size: var(--text-small);
+    line-height: 24px;
 
 }
  .align_right{

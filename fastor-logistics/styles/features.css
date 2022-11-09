@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 3rem;
-    margin: 1rem auto;
+    margin: 3rem auto;
 }
 .features__title{
     font-size: var(--text-xlarge);

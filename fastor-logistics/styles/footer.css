@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-size: 100%;
   background-position:0 100px;
-  margin-bottom: -1rem;
+  /* margin-bottom: -1rem; */
   overflow: hidden;
 }
 .footer__contact_left {
@@ -88,7 +88,7 @@
 }
 .footer__bg_wrapper {
   position: absolute;
-  /* background: url("../img/footerBg.svg"); */
+  background: url("../public/footerBg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -98,7 +98,7 @@
   z-index: -1; 
 }
 .marginScalingImg{
-  margin: -9% 0 -2.5% 0;
+  margin: -1rem 0 -2.5rem 0;
 }
 .footer__left {
   display: flex;

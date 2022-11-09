@@ -118,7 +118,7 @@ export default function Home(){
         });
     }
       // reviews cards
-      var initialReviewIndex=0;
+      // var initialReviewIndex=0;
       var reviews_data_obj=
         [
             {
@@ -142,6 +142,8 @@ export default function Home(){
             title:"5. It was a very good experience",
             }
        ];
+      const [initialReviewIndex,setReviewIndex]=useState(Math.floor(reviews_data_obj.length/2));
+
        var userProfileImgArr=[
         "../public/reviewImg1.png",        
         "../public/reviewImg2.png",
@@ -149,13 +151,12 @@ export default function Home(){
         "../public/reviewImg4.png",
         "../public/reviewImg5.png"       
        ];
-const [profile,setProfile]=useState(userProfileImgArr);
-        function displayReviewCard(index){
+      const [profile,setProfile]=useState(userProfileImgArr);
+      function displayReviewCard(index){
+        console.log(index,"disFunc")
             document.querySelector(".reviews__card_mobile_container")
             .innerText="";
 
-        // let reviews_card_cont= document.createElement("div");
-        // reviews_card_cont.setAttribute("class","reviews__card_main_container");
         let reviews_card= document.createElement("div");
         reviews_card.setAttribute("class","reviews__card");
 
@@ -174,65 +175,48 @@ const [profile,setProfile]=useState(userProfileImgArr);
         .append(reviews_card);
 
       }
-    //   displayReviewCard(initialReviewIndex);
-      
-    //  user profile images append function
-//       function userProfile(arr){
-// console.log("hi")
-//         let img1=document.querySelector("#profile_img1")
-//         img1.src=arr[0];
-
-//         let img2=document.querySelector("#profile_img2")
-//         img2.src=arr[1];
-
-//         let img3=document.querySelector("#profile_img3")
-//         img3.src=`{/${arr[0]}}`;
-
-//         let img4=document.querySelector("#profile_img4")
-//         img4.src=`{/${arr[0]}}`;
-
-//         let img5=document.querySelector("#profile_img5")
-//         img5.src=`{/${arr[0]}}`;
-      
-//       };
       useEffect(()=>{
         displayReviewCard(initialReviewIndex);
-        // userProfile(userProfileImgArr);
-        // setProfile(userProfileImgArr)
-  
-    },[profile])
-    //   userProfile(userProfileImgArr);
+    },[initialReviewIndex])
             // scroll left
             function scrollLeftOnClicked(elmentClassName) {
                 var container = document.querySelector(`.${elmentClassName}`);
                 // sideScroll(container, "right", 5, 600, 5);
                 let profileNew=[...profile];
                 if(initialReviewIndex<reviews_data_obj.length-1){
-                  initialReviewIndex+=1;
+                  setReviewIndex(prev=>prev+1);
                   let lastImg=profileNew.shift();
                   console.log(lastImg,profileNew,"initial")
                   profileNew.push(lastImg);
+                  setProfile(profileNew);
                 }
+                // else{
+                //   setReviewIndex(0);
+                //   let lastImg=profileNew.shift();
+                //   console.log(lastImg,profileNew,"initial")
+                //   profileNew.push(lastImg);
+                //   setProfile(profileNew);
+                // }
                 displayReviewCard(initialReviewIndex);
-                setProfile(profileNew);
-                console.log(profile,"indjkdh")
-                // userProfile(userProfileImgArr);
+                // setProfile(profileNew);
+                console.log(initialReviewIndex,profile,"indjkdh")
               }
+              
               // scroll right
               function scrollRightOnClicked(elmentClassName) {
                 var container = document.querySelector(`.${elmentClassName}`);
                 // sideScroll(container, "left", 5, 600, 5);
                 let profileNew=[...profile];
                 if(initialReviewIndex>0){
-                  initialReviewIndex-=1;
+                  setReviewIndex(prev=>prev-1);
                   let lastImg=profileNew.pop();
                   profileNew.unshift(lastImg);
-                  console.log(userProfileImgArr,"secRigh")
-
+                  console.log(initialReviewIndex,"secRigh")
+                  setProfile(profileNew);
                 }
+                
                 displayReviewCard(initialReviewIndex);
-                setProfile(profileNew)
-                // userProfile(userProfileImgArr);
+                // setProfile(profileNew);
               }
     return (
         <div>
@@ -365,11 +349,11 @@ const [profile,setProfile]=useState(userProfileImgArr);
     </div>
 
     {/* <!-- reviews start --> */}
-      <section class="">
-        <img
-          style={{width: "100%",backgroundColor:"red"}}
+      <section className="reviews_section">
+        <Image
+          style={{width: "100%"}}
           src={StoreNeedUp}
-          class="reviewBgMargin"
+          // class="reviewBgMargin"
 
           alt=""
         />
@@ -379,51 +363,40 @@ const [profile,setProfile]=useState(userProfileImgArr);
             What people say about Us.
           </h1>
           <div>
+            
           <div class="reviews__card_container">
             <div class="reviews__next_btn" onClick={()=>scrollRightOnClicked('reviews__card_container')}>
-              <i style={{marginLeft: "-0.2rem"}} class="fa fa-angle-left"></i>
+              {/* <i style={{marginLeft: "-0.2rem"}} class="fa fa-angle-left"></i> */}
+              <Image
+              width="20"
+              height="30"
+              alt=""
+              src="/../public/toLeftIcon.png"
+              />
             </div>
             <div class="reviews__prev_btn" onClick={()=>scrollLeftOnClicked('reviews__card_container')}>
-              <i style={{marginRight: "-0.2rem"}} class="fa fa-angle-right"></i>
+              {/* <i style={{marginRight: "-0.2rem"}} class="fa fa-angle-right"></i> */}
+              <Image
+              width="20"
+              height="30"
+              alt=""
+              src="/../public/toRightIcon.png"
+              />            
             </div>
             <div class="reviews__card_mobile_container"></div>
           </div>
+
           <div style={{textAlign:"center"}} class="user_profile_main_container">
-          {profile?.map((e,index)=>(
-            // {/* <> */}
-            
+          
+          {profile?.map((e)=>(
             <span class="user_profile_container" >
               <Image class="user_profile_img" id="profile_img1"
-              width="100" height="100" alt={userProfileImgArr[0]}
+              width="100" height="100" alt={e}
               src={`/${e}`}
               />
             </span> 
-        //  {/* <span class="user_profile_container" >
-        //       <Image class="user_profile_img" id="profile_img2"
-        //       width="100" height="100" alt="1" 
-        //       src={`/${userProfileImgArr[1]}`}
-        //       />
-        //     </span>
-        //     <span class="user_profile_container" >
-        //       <Image class="user_profile_img" id="profile_img3"
-        //       width="100" height="100" alt="2" 
-        //       src={`/${userProfileImgArr[2]}`}
-        //       />
-        //     </span> 
-        //     <span class="user_profile_container" >
-        //       <Image class="user_profile_img" id="profile_img4"
-        //       width="100" height="100" alt="3" 
-        //       src={`/${userProfileImgArr[3]}`}
-        //       />
-        //     </span>
-        //     <span class="user_profile_container" >
-        //       <Image class="user_profile_img" id="profile_img5"
-        //       width="100" height="100" alt="4" 
-        //       src={`/${userProfileImgArr[4]}`}
-        //       />
-        //     </span>  */}
-        //     {/* </> */}
          ))} 
+
         </div>
        </div>
       </div>
@@ -630,7 +603,7 @@ const [profile,setProfile]=useState(userProfileImgArr);
 
     {/* <!--footer start--> */}
     <footer>
-      <Image style={{width: "100%"}} class="marginScalingImg" src={footerUp} alt="steps"/>
+      <Image class="marginScalingImg" src={footerUp} alt="steps"/>
 
       <div class="footer__container">
         <div class="footer__bg_wrapper"></div>
