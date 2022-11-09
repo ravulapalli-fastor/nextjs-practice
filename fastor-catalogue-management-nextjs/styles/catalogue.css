@@ -1,0 +1,108 @@
+.catalogue_main_container{
+    font-family: var(--primary-font);
+    width:85%;
+    margin:auto;
+    font-style: normal;
+}
+
+.catalogue_header_container{
+    position:relative;
+}
+.catalogue_main_title{
+    font-size: 100px;
+    font-weight: 700;
+}
+.catalogue_main_description{
+    font-weight:600;
+    font-size: 28px;
+    color: #7B7D8A;
+}
+
+.catalogue_img_line{
+position: absolute;
+left: 79.89%;
+right: -6.97%;
+top:-30%;
+bottom: -49.%;
+   
+}
+
+.catalogue_data_container{
+    display:flex;
+    gap:5%;
+    height:750px;
+    max-height: max-content;
+    margin-top: 7%;
+    font-family: var(--primary-font);
+}
+.catalogue_data_right{
+    width:55%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.catalogue_data_right_inner_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:28px;
+    padding-left:0.5rem;
+
+}
+.catalogue_data_right_description{
+    font-size:28px;
+    font-weight: 600;
+    line-height: 33px;
+    width:500px;
+    min-height:68px;
+    max-height: fit-content;
+    align-content: center;
+    color:#3F4255;
+}
+.catalogue_data_right_inner_container:hover{
+    border: 1px solid #DFDFDF;
+    box-shadow: 6px 26px 49px -2px rgba(125, 125, 125, 0.25);
+    border-radius: 12px;
+}
+
+
+
+
+/* mobile view */
+@media (max-width:920px){
+    .catalogue_main_title{
+        font-size:52px;
+    }
+    .catalogue_header_container{
+        height:420px;
+    }    
+    .catalogue_img_line{
+        left: 18.89%;
+        right: -4.97%;
+        top:30%;
+        bottom: -49.%;
+    }
+    .catalogue_main_description{
+        font-size: var(--text-medium);
+    }
+
+
+    .catalogue_data_container{
+        flex-direction: column;
+        gap:1rem;
+        margin:auto;
+        height:max-content;
+        align-items: center;
+        width:100%;
+        padding-top: 1.5rem;
+    }
+    .catalogue_data_right{
+        width:100%;
+        align-items: center;
+    }
+    .catalogue_data_right_description{
+        font-size: var(--text-medium);
+    }
+
+}
