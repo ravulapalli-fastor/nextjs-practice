@@ -572,7 +572,8 @@ const scrollDir=() =>{
           <div class="storeNeed__card_main_container">
             <div class="storeNeed__next_btn" id="storeNeed__next_btnId" onClick={()=>scrollRightOnClicked('storeNeed__card_container')}>
               <i style={{marginLeft: "-0.2rem"}} className="fa fa-angle-left">
-                <Image src={LeftArrowIconImg}/>
+                <Image style={{alignSelf:"center"}}
+                  src={LeftArrowIconImg}/>
               </i>
             </div>
             <div class="storeNeed__prev_btn" id="storeNeed__prev_btnId" onClick={()=>scrollLeftOnClicked('storeNeed__card_container')}>
@@ -583,23 +584,23 @@ const scrollDir=() =>{
             </div>
             <div class="storeNeed__card_container">
               <div class="storeNeed__card">
-                <Image class="storeNeed__card_img cropImg_1" src={storeNeedImg1} alt="store need"/>
+                <Image class="storeNeed__card_img " src={storeNeedImg1} alt="store need"/>
                 <h3 class="storeNeed__card_title">Jewellery</h3>
               </div>
               <div class="storeNeed__card">
-                <Image class="storeNeed__card_img cropImg_2" src={storeNeedImg2} alt="store need"/>
+                <Image class="storeNeed__card_img " src={storeNeedImg2} alt="store need"/>
                 <h3 class="storeNeed__card_title">Beauty</h3>
               </div>
               <div class="storeNeed__card">
-                <Image class="storeNeed__card_img cropImg_1" src={storeNeedImg3} alt="store need"/>
+                <Image class="storeNeed__card_img " src={storeNeedImg3} alt="store need"/>
                 <h3 class="storeNeed__card_title">Fashion</h3>
               </div>
               <div class="storeNeed__card">
-                <Image class="storeNeed__card_img cropImg_1" src={storeNeedImg4} alt="store need"/>
+                <Image class="storeNeed__card_img " src={storeNeedImg4} alt="store need"/>
                 <h3 class="storeNeed__card_title">Sports</h3>
               </div>
               <div class="storeNeed__card">
-                <Image class="storeNeed__card_img cropImg_1" src={storeNeedImg5} alt="store need"/>
+                <Image class="storeNeed__card_img " src={storeNeedImg5} alt="store need"/>
                 <h3 class="storeNeed__card_title">Sweets</h3>
               </div>
               <div class="storeNeed__card">

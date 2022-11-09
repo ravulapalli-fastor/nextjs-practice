@@ -89,7 +89,7 @@
     animation: nextBtn 1s infinite;
 }
 .reviews__prev_btn::after{
-    content: "<";
+    content: "";
     text-align:center;
     margin-top:0.1rem;
     position: absolute;

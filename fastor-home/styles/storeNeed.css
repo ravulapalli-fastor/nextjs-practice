@@ -120,12 +120,7 @@ background:#232f3e;  /* background-size: contain; */
   object-fit: cover;
   border-radius: 6px;
 }
-.cropImg_1{
-  margin-top: -20px;
-}
-.cropImg_2{
-  margin-top: -15px;
-}
+
 .storeNeed__card .storeNeed__card_title {
   position: absolute;
   bottom: -0.5rem;
@@ -184,12 +179,7 @@ display: none;
   height: 200px;
   width: auto;
 }
-.cropImg_1{
-  margin-top: -1px;
-}
-.cropImg_2{
-  margin-top: -5px;
-}
+
 .storeNeed__card_title{
   font-size: var(--text-xsmall) !important;
   min-width: fit-content !important;
