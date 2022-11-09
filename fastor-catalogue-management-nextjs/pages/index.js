@@ -11,6 +11,12 @@ import lineDrawOrangeImg from "../public/lineDrawImg.png";
 import catalogueImg from "../public/catalogueImg.png";
 import greenTick from "../public/greenTick.png";
 
+// offerings
+import lineDrawImgBlue from "../public/lineDrawImgBlue.png";
+import offeringsImg from "../public/offeringImg.png";
+import macbookImg from "../public/DeviceMacbook.png";
+import ManageCatalogue from "../public/ManageCatalogue2.png";
+
 
 export default function Home(){
    return (
@@ -100,7 +106,7 @@ export default function Home(){
       </div>
 
     </div>
-    
+
 {/* catalogue data section start */}
     <section className="catalogue_data_container">
       <div className="catalogue_data_left">
@@ -175,15 +181,39 @@ export default function Home(){
    {/* catalogue section end */}
 
    {/* offerings section start */}
-     <section className="offering_main_container">
+     <section className="offerings_main_container">
+
+      <h1 className="offerings_title">Offerings</h1>
+      <Image 
+      className="offerings_data_img"
+      width="auto"
+      height="auto"
+      alt="offerings data"
+      src={offeringsImg}
+      />
+      <div className="offerings_macbook_container">
+      {/* <Image 
+      className="offerings_macbook_data_img"
+      width="auto"
+      height="auto"
+      alt="offerings data"
+      src={ManageCatalogue}
+      />  */}
+      </div>     
+      <div>
+      <Image 
+      className="offerings_lineDraw_img"
+      width="auto"
+      height="auto"
+      alt="offerings data"
+      src={lineDrawImgBlue}
+      />      
+      </div>
 
      </section>
 
    {/* offerings section end */}
-
-
-
-
+    
 
     </>
    )

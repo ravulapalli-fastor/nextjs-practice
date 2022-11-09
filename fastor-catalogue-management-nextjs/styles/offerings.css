@@ -1,0 +1,44 @@
+
+.offerings_main_container{
+    border:1px solid rgb(255, 0, 51);
+    width:92%;
+    font-family: var(--primary-font);
+    margin:5% auto;
+    position:relative;
+}
+
+.offerings_title{
+    font-size: var(--text-xlarge);
+    font-weight: 700;
+    text-align:center;
+}
+
+.offerings_data_img{
+    width:100%;
+}
+
+.offerings_macbook_container{
+    /* border:1px solid maroon; */
+    position:absolute;
+    top:50%;
+    left:20%;
+    width:58.76%;
+    height:430px;
+    background: url("../public/DeviceMacbook.png");
+}
+
+.offerings_macbook_data_img{
+    border:1px solid darkmagenta;
+    width:80%;
+    height:90%;
+}
+
+.offerings_lineDraw_img{
+    /* border:1px solid blue; */
+}
+
+@media (max-screen:920px){
+    .offerings_title{
+        font-size: var(--text-low-medium);
+    }
+}
