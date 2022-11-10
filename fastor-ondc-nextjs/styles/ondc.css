@@ -1,8 +1,16 @@
+@import url("./circle_container.css");
+
 .ondc_main_container{
     font-family: var(--primary-font);
     width:85%;
     margin:auto;
     font-style: normal;
+    color:#3F4255;
+
+    height:max-content;
+    padding-bottom: 500px;
+    border:1px solid red;
+
 }
 
 .ondc_header_container{
@@ -11,7 +19,8 @@
 .ondc_main_title{
     font-size: 80px;
     font-weight: 700;
-    color:var(--color-text) 
+
+    /* color:var(--color-text)  */
 }
 .ondc_main_description{
     font-weight:600;
@@ -31,7 +40,7 @@ bottom: -49.%;
      font-family: var(--primary-font);
 font-style: normal;
 font-weight: 700;
-color:var(--color-text);
+/* color:var(--color-text); */
 text-align: center; 
 margin:7rem;
 }
@@ -58,21 +67,24 @@ margin:7rem;
 }
 .ondc_data_right_inner_container{
     display: flex;
-    width:600px;
+    width:550px;
     height:100px;
     flex-direction: row;
-    justify-content: space-evenly;
     align-items:center;
     gap:28px;
-    /* padding-left:0.5rem; */
+    padding-left:0.75rem;
 
 }
+
 .ondc_data_right_description{
     font-size: var(--text-low-medium);
     font-weight: 600;
     line-height: 33px;
-    width:500px;
+    width:75%;
     min-height:68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-height: fit-content;
     color:#3F4255;
 }
@@ -82,7 +94,40 @@ margin:7rem;
     border-radius: 12px;
 }
 
+/* button container */
+.benefits_below_btn_container{
+font-family: var(--primary-font);
+font-style: normal;
+color:var(--secondary-color);
+background:#3F4255;
+height: 240px;
+border-radius: 12px;
 
+ display:flex;
+ flex-direction: column;
+ align-content: center;
+ justify-content: center;
+ margin:5rem auto;
+}
+
+.btn_data{
+    font-size: var(--text-large);
+    font-weight: 700;
+    line-height:43px;
+    width:964px;
+    margin:auto;
+}
+.header__mobile_btn{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 12px 20px;
+gap: 10.45px;
+width: 180px;
+height: 48px;
+font-size: 16px;
+margin:auto;
+}
 
 
 /* mobile view */

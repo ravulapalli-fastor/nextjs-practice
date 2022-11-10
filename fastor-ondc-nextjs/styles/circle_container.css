@@ -1,0 +1,39 @@
+.ondc_circle_main_container{
+    border:1px solid purple;
+    display:flex;
+}
+.ondc_circle_dots_box{
+    width:403px;
+    height:423px;
+    /* color:#54585F; */
+    border-radius:50%;
+    border:4px dashed #54585F;
+    /* position:relative; */
+}
+
+.ondc_circle_inner_box{
+    width:255px;
+    height:248px;
+    border-radius:50%;
+    border:8px solid #FFFFFF;
+    background:#232F3E;
+    box-shadow: 4px 16px 59px rgba(0, 0, 0, 0.2);
+    margin: 16%;
+}
+
+
+
+
+/* buttons */
+.ondc_circle_btns_container{
+    display:flex;
+    flex-direction: column;
+    gap:4rem;
+    border:1px solid red;
+    width:fit-content;
+    padding:1rem;
+}
+
+.ondc_circle_btns_container>button:nth-child(2){
+    margin-left: 25%;
+}

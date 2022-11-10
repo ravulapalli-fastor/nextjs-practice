@@ -1,5 +1,5 @@
-import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link';
 
 // images
 import lineDrawOrangeImg from "../public/lineDrawImg.png";
@@ -10,6 +10,8 @@ import benifitsImg1 from "../public/benifitsImg1.png";
 import benifitsImg2 from "../public/benifitsImg2.png";
 import benifitsImg3 from "../public/benifitsImg3.png";
 import benifitsImg4 from "../public/benifitsImg4.png";
+import rightArrow from "../public/arrow-right.svg";
+import Ondcbutton from '../components/Ondcbutton';
 
 
 export default function Home(){
@@ -113,10 +115,48 @@ export default function Home(){
 
       </div>
     </section>
-   {/* ondc section end */}
+   {/* ondc benefits section end */}
 
+    {/* button container */}
+    <div className="benefits_below_btn_container">
+        <p className="btn_data">
+          Enable ONDC access for your store and reach million of people
+        </p>
+        <Link className="header__mobile_btn" href="#">
+            <button id="ondc_btn_id" className="btn btn-primary">
+              Get Started
+              <Image style="display: inline-block; margin-left: 0.5rem" 
+              src={rightArrow} 
+              width="20"
+              height="20"
+              alt="arrow-right"/>
+            </button>
+        </Link>
+    </div>
 
-
+    {/* circle data container */}
+    <div className='ondc_circle_main_container'>
+      {/* circle */}
+      <div className='ondc_circle_dots_box'>
+        <div className='ondc_circle_inner_box'>
+          <Image
+          src="/../public/ondc_fastor_img.png"
+          width="100"
+          height="200"
+          alt="ondc_fastor"
+          style={{margin:"8% 28%"}}
+          />
+        </div>
+      </div>
+    <div className="ondc_circle_btns_container">
+      <Ondcbutton data="Get a customised seller dashboard for ONDC orders"
+       color="#7B7D8A"/>
+      <Ondcbutton data="Analyse customer behaviour"
+       color="#DEAF37"/>
+      <Ondcbutton data="Analyse customer behaviour"
+       color="#3766DE"/>
+    </div>
+    </div>
     </div>
     </>
   )
