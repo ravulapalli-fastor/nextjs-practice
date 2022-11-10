@@ -1,0 +1,133 @@
+.ondc_main_container{
+    font-family: var(--primary-font);
+    width:85%;
+    margin:auto;
+    font-style: normal;
+}
+
+.ondc_header_container{
+    position:relative;
+}
+.ondc_main_title{
+    font-size: 80px;
+    font-weight: 700;
+    color:var(--color-text) 
+}
+.ondc_main_description{
+    font-weight:600;
+    font-size: var(--text-medium);
+    color: #7B7D8A;
+}
+
+.ondc_img_line{
+position: absolute;
+left: 69.89%;
+right: -4.97%;
+top:-30%;
+bottom: -49.%;
+}
+.benefits_title{
+     font-size:var(--text-xlarge);  
+     font-family: var(--primary-font);
+font-style: normal;
+font-weight: 700;
+color:var(--color-text);
+text-align: center; 
+margin:7rem;
+}
+.orange_solid_line{
+  position:absolute;
+  top:30rem;
+  right:20rem;
+  left:50rem;
+}
+.ondc_data_container{
+    display:flex;
+    gap:5%;
+    height:750px;
+    max-height: max-content;
+    margin-top: 10rem;
+    font-family: var(--primary-font);
+}
+.ondc_data_right{
+    width:55%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.ondc_data_right_inner_container{
+    display: flex;
+    width:600px;
+    height:100px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:center;
+    gap:28px;
+    /* padding-left:0.5rem; */
+
+}
+.ondc_data_right_description{
+    font-size: var(--text-low-medium);
+    font-weight: 600;
+    line-height: 33px;
+    width:500px;
+    min-height:68px;
+    max-height: fit-content;
+    color:#3F4255;
+}
+.ondc_data_right_inner_container:hover{
+    border: 1px solid #DFDFDF;
+    box-shadow: 6px 26px 49px -2px rgba(125, 125, 125, 0.25);
+    border-radius: 12px;
+}
+
+
+
+
+/* mobile view */
+@media (max-width:920px){
+    .ondc_main_title{
+        font-size:var(--text-xxxlarge);
+    }
+    .benefits_title{
+        font-size:var(--text-medium)
+    }
+    .orange_solid_line{
+        top:38rem;
+        bottom:50rem;
+        left:20rem;
+        right:50rem
+    }
+    .ondc_header_container{
+        height:420px;
+    }    
+    .ondc_img_line{
+        left: 18.89%;
+        right: -4.97%;
+        top:30%;
+        bottom: -49.%;
+    }
+    .ondc_main_description{
+        font-size: var(--text-low-medium);
+    }
+
+
+    .ondc_data_container{
+        flex-direction: column;
+        gap:2rem;
+        margin:auto;
+        height:max-content;
+        align-items: center;
+        width:100%;
+        padding-top: 3.5rem;
+    }
+    .ondc_data_right{
+        width:100%;
+        align-items: center;
+    }
+    .ondc_data_right_description{
+        font-size: var(--text-small);
+    }
+
+}
