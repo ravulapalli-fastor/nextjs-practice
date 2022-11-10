@@ -2,15 +2,10 @@
 @import url("./hero.css");
 @import url("./catalogue.css");
 @import url("./offerings.css");
-/* @import url("./benefits.css");
+@import url("./reviews.css");
 @import url("./features.css");
-@import url("./simplify.css");
-/*@import url("./storeNeed.css");
-@import url("./steps.css");
-*/
-/*@import url("./reviews.css");
 @import url("./faq.css");
-@import url("./footer.css");  */ 
+@import url("./footer.css");  
 
 html{
   scroll-behavior: smooth;
