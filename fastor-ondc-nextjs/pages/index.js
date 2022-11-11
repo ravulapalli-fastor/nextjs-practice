@@ -157,6 +157,50 @@ export default function Home(){
        color="#3766DE"/>
     </div>
     </div>
+
+    {/* ondc data section 2 start */}
+    <div className='works_container'>
+    <h1 className="works_title">How it works</h1>
+    <section className="ondc_data_container works_inner_container">
+      <div className="ondc_data_left">
+      <Image
+          style={{paddingTop:"1.5rem"}}
+          src={"/../public/ondcProductImg2.png"}
+         width="518"
+         height="508"
+         alt=""
+        />
+      </div>
+
+      <ul className=" ondc_ul">
+         <li >Install the ONDC plugin on your Fastor Dashboard         </li>
+         <li >All products in your catalogue will automatically get listed         </li>
+         <li >Receive orders and dispatch orders          </li>
+         <li >Track your order status          </li>
+         <li >Plan accordingly          </li>
+         <li >Our delivery partners will help you fulfil orders         </li>
+      </ul>
+
+    </section>
+    </div>
+          {/* button container 2*/}
+          <div className="benefits_below_btn_container btn_container2">
+        <p className="btn_data">
+          Enable ONDC access for your store and reach million of people
+        </p>
+        <Link className="header__mobile_btn" href="#">
+            <button id="ondc_btn_id" className="btn btn-primary">
+              Get Started
+              <Image style="display: inline-block; margin-left: 0.5rem" 
+              src={rightArrow} 
+              width="20"
+              height="20"
+              alt="arrow-right"/>
+            </button>
+        </Link>
+    </div>
+
+
     </div>
     </>
   )
