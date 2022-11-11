@@ -51,6 +51,7 @@
 @media (max-width: 920px) {
   .header__mobile_btn{
     display: block;
+    height:fit-content
   }
     .header__container{
         padding: 1rem 1rem;

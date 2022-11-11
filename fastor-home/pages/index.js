@@ -5,7 +5,8 @@ import logo from "../public/logo.svg";
 import rightArrow from "../public/arrow-right.svg";
 import arrowRightOrange from "../public/arrow-right-orange.svg";
 import heroRightImg from "../public/heroRightImg.svg";
-import paymentDesktop from "../public/payment_desktop.png"
+import paymentDesktop from "../public/payment_desktop.svg"
+import paymentMobile from "../public/payment_mobile.svg"
 import heroMobileImg from "../public/heroMobileImg.svg";
 import heroBg1 from "../public/heroBg1.svg";
 import fetureIcon1 from "../public/fetureIcon1.svg";
@@ -319,62 +320,63 @@ const scrollDir=() =>{
         });
     }
 
-  //   var reviews_data_obj=
-  //   [
-  //       {
-  //       description:"Fastor is a one stop solution for all your business needs. They have helped me to grow my business exponentially and now I am able to reach more customers.",
-  //       title:"Nikhil Athani",
-  //       sub_title:"Electronics Shop",
-  //       image:reviewImage1
-  //       },
-  //       {
-  //       "description":"Never knew that taking my grocery business online will be this quick and easy. The Fastor team assisted with everything and now I sell online too.They have definitely added so much value to my small offline business.",
-  //       "title":"Mohit Pau",
-  //       "sub_title":"Grocery Shop Owner",
-  //       "image":reviewImage2
-  //       },
-  //       {
-  //       "description":"I could not imagine that selling online would be this easy. Was able to launch my website within the same day.Great experience with Fastor.",
-  //       "title":"Veer Vaddar",
-  //       "sub_title":" Clothing Shop",
-  //       "image":reviewImage3
-  //       }
-  //  ]
-  //   const displayReviewCard=(index)=>{
-  //       document.querySelector(".reviews__card_mobile_container")
-  //       .innerText=" ";
+    var reviews_data_obj=
+    [
+        {
+        description:"Fastor is a one stop solution for all your business needs. They have helped me to grow my business exponentially and now I am able to reach more customers.",
+        title:"Nikhil Athani",
+        sub_title:"Electronics Shop",
+        image:reviewImage1
+        },
+        {
+        "description":"Never knew that taking my grocery business online will be this quick and easy. The Fastor team assisted with everything and now I sell online too.They have definitely added so much value to my small offline business.",
+        "title":"Mohit Pau",
+        "sub_title":"Grocery Shop Owner",
+        "image":reviewImage2
+        },
+        {
+        "description":"I could not imagine that selling online would be this easy. Was able to launch my website within the same day.Great experience with Fastor.",
+        "title":"Veer Vaddar",
+        "sub_title":" Clothing Shop",
+        "image":reviewImage3
+        }
+   ]
+    const displayReviewCard=(index)=>{
+        document.querySelector(".reviews__card_mobile_container")
+        .innerText=" ";
 
-  //       console.log("hellofirst",reviews_data_obj[0],index);
+        console.log("hellofirst",reviews_data_obj[0],index);
 
-  //   let reviews_card_cont= document.createElement("div");
-  //   reviews_card_cont.setAttribute("class","reviews__card_mobile_container");
-  //   let reviews_card= document.createElement("div");
-  //   reviews_card.setAttribute("class","reviews__card");
-  //   let reviews_card_description= document.createElement("p");
-  //   reviews_card_description.setAttribute("class","reviews__card_description");
-  //   let reviews_card_img= document.createElement("img");
-  //   reviews_card_img.setAttribute("class","reviews__card_img");
-  //   let next_div=document.createElement("div");
-  //   let reviews_card_title= document.createElement("h3");
-  //   reviews_card_title.setAttribute("class","reviews__card_title");
-  //   let reviews_card_sub_title= document.createElement("p");
-  //   reviews_card_sub_title.setAttribute("class","reviews__card_sub_title");
+    let reviews_card_cont= document.createElement("div");
+    reviews_card_cont.setAttribute("class","reviews__card_mobile_container");
+    let reviews_card= document.createElement("div");
+    reviews_card.setAttribute("class","reviews__card");
+    let reviews_card_description= document.createElement("p");
+    reviews_card_description.setAttribute("class","reviews__card_description");
+    let reviews_card_img= document.createElement("Image");
+    reviews_card_img.setAttribute("class","reviews__card_img");
+    let next_div=document.createElement("div");
+    let reviews_card_title= document.createElement("h3");
+    reviews_card_title.setAttribute("class","reviews__card_title");
+    let reviews_card_sub_title= document.createElement("p");
+    reviews_card_sub_title.setAttribute("class","reviews__card_sub_title");
     
-  //   reviews_card_description.innerText=`${reviews_data_obj[index].description}`;
-  //   reviews_card_img.src=`/${reviews_data_obj[index].image.png}`;
-  //   reviews_card_title.innerText=`${reviews_data_obj[index].title}`;
-  //   reviews_card_sub_title.innerText=`${reviews_data_obj[index].sub_title}`;
+    reviews_card_description.innerText=`${reviews_data_obj[index].description}`;
+    reviews_card_img.src=`/../public/reviewImage${index}`;
+    reviews_card_title.innerText=`${reviews_data_obj[index].title}`;
+    reviews_card_sub_title.innerText=`${reviews_data_obj[index].sub_title}`;
 
-  //   next_div.append(reviews_card_title,reviews_card_sub_title);
-  //   reviews_card.append(reviews_card_description,reviews_card_img,next_div);
-  //   reviews_card_cont.append(reviews_card);
-  //   console.log("hello",reviews_data_obj[2]);
+    next_div.append(reviews_card_title,reviews_card_sub_title);
+    reviews_card.append(reviews_card_description,reviews_card_img,next_div);
+    reviews_card_cont.append(reviews_card);
 
-  //   document.querySelector(".reviews__card_mobile_container")
-  //   .append(reviews_card_cont);
-  // }
+    document.querySelector(".reviews__card_mobile_container")
+    .append(reviews_card_cont);
+  }
   
-  // displayReviewCard(0);
+  // useEffect(()=>{
+  //   displayReviewCard(0);
+  // },[])
 
 
     return (
@@ -408,8 +410,8 @@ const scrollDir=() =>{
               Get Started
               <Image style="display: inline-block; margin-left: 0.5rem" 
               src={rightArrow} 
-              width="100"
-              height="100"
+              width="25"
+              height="25"
               alt="arrow-right"/></button></Link>
           {/* <!-- uncomment for hamburger/menu -->
           <!-- <img
@@ -486,7 +488,8 @@ const scrollDir=() =>{
             <div id="hero__right_img_mobile">
               <Image width="94%" className="hero__img" 
               src={heroMobileImg} alt="hero"/>
-              <Image id="hero__img_payment_mobile" width="80%" 
+              <Image id="hero__img_payment_mobile" width="auto" 
+              height="auto"
               src={paymentDesktop} alt="payments"/>
             </div>
           </div>
@@ -557,7 +560,7 @@ const scrollDir=() =>{
       {/* <!-- features section end --> */}
       {/* <!-- store need start -->*/}
       <section className="">
-        <Image style={{width: "100%", marginBottom: "-1rem"}} src={storeNeedUp} alt=""/>
+        <Image id="reviews_bg_up" src={storeNeedUp} alt=""/>
         <div className="storeNeed__container">
           <h1 className="storeNeed__heading">Get The Store You Need</h1>
           <p className="storeNeed__description">
@@ -614,7 +617,7 @@ const scrollDir=() =>{
             </div>
           </div>
         </div>
-        <Image style="width: 100%; margin-top: -0.5rem" src={storeNeedDown} alt=""/>
+        <Image id="reviews_bg_down" src={storeNeedDown} alt=""/>
       </section>
       {/* <!-- store need end --> */}
 
@@ -903,25 +906,23 @@ const scrollDir=() =>{
             Here’s what your fellow Business Owners have to say..
           </h1>
          
-         {/* <Media query="(max-width:920px)">
-          {(matches)=>(
-            matches?<ReviewMobile/>:"Hello desktop"
-          )}
-         </Media> */}
-
           <div className="reviews__card_main_container">
-            <div className="reviews__next_btn" onClick={()=>scrollLeftOnClicked('reviews__card_container')}>
+            <div className="reviews__next_btn" onClick={()=>scrollRightOnClicked('reviews__card_container')}>
               {/* <li style={{marginLeft: "-0.2rem"}} className="fa fa-angle-left"> */}
-                <Image src={RightArrowIconImg} />
+                <Image src={LeftArrowIconImg} />
               {/* </li> */}
             </div>
-            <div className="reviews__prev_btn" onClick={()=>scrollRightOnClicked('reviews__card_container')}/>
+            <div className="reviews__prev_btn" onClick={()=>scrollLeftOnClicked('reviews__card_container')}/>
               {/* <li style={{marginRight: "-0.5rem"}} className="fa fa-angle-right"> */}
-                <Image src={LeftArrowIconImg} style={{position:"absolute",right:"38.7rem",top:"16.2rem",zIndex:"4"}}/>
+                <Image src={RightArrowIconImg} 
+                onClick={()=>scrollLeftOnClicked('reviews__card_container')}
+                className="prev_btn_css"
+                
+                />
               {/* </li> */}
             </div>
 
-            <div className="reviews__card_container">
+            <div className="reviews__card_container desktop_view">
               <div className="reviews__card">
                 <p className="reviews__card_description">
                   Fastor is a one stop solution for all your business needs. They have helped me to grow my business exponentially andnow I am able to reach more customers.
@@ -1046,7 +1047,9 @@ const scrollDir=() =>{
 
     {/* <!--footer start--> */}
     <footer>
-      <Image style={{width: "100%"}} className="marginScalingImg" src={footerUp} alt="steps"/>
+    <div className="footer_middle_img">
+      {/* <Image className="marginScalingImg" src={footerUp} alt="steps"/> */}
+      </div>
 
       <div className="footer__container">
         <div className="footer__bg_wrapper"></div>

@@ -77,7 +77,7 @@
     font-size: var(--text-xsmall);
 }
 .features__row{
-    gap: .2rem;
+    gap: .3rem;
 }
 .features__card_container{
     gap: .7rem;
