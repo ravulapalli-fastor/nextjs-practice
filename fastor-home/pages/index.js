@@ -458,7 +458,7 @@ const scrollDir=() =>{
         <div className="hero__container" 
         style={{backgroundImage:`url(${heroBg1.src})`}}
         >
-          <Image className="hero__img_overlay" src={heroBg1}/>
+          <Image className="hero__img_overlay" src={heroBg1} alt="heroBg"/>
           <div className="custom_container">
             <div className="hero__left_content_container">
               <h1 className="hero__title">
@@ -576,12 +576,12 @@ const scrollDir=() =>{
             <div className="storeNeed__next_btn" id="storeNeed__next_btnId" onClick={()=>scrollRightOnClicked('storeNeed__card_container')}>
               <i style={{marginLeft: "-0.2rem"}} className="fa fa-angle-left">
                 <Image style={{alignSelf:"center"}}
-                  src={LeftArrowIconImg}/>
+                  src={LeftArrowIconImg} alt="arrow"/>
               </i>
             </div>
             <div className="storeNeed__prev_btn" id="storeNeed__prev_btnId" onClick={()=>scrollLeftOnClicked('storeNeed__card_container')}>
               <i style={{marginRight: "-0.2rem"}} className="fa fa-angle-right">
-              <Image src={RightArrowIconImg}/>
+              <Image src={RightArrowIconImg} alt="arrow"/>
 
               </i>
             </div>
@@ -909,7 +909,7 @@ const scrollDir=() =>{
           <div className="reviews__card_main_container">
             <div className="reviews__next_btn" onClick={()=>scrollRightOnClicked('reviews__card_container')}>
               {/* <li style={{marginLeft: "-0.2rem"}} className="fa fa-angle-left"> */}
-                <Image src={LeftArrowIconImg} />
+                <Image src={LeftArrowIconImg} alt=""/>
               {/* </li> */}
             </div>
             <div className="reviews__prev_btn" onClick={()=>scrollLeftOnClicked('reviews__card_container')}/>
@@ -917,7 +917,7 @@ const scrollDir=() =>{
                 <Image src={RightArrowIconImg} 
                 onClick={()=>scrollLeftOnClicked('reviews__card_container')}
                 className="prev_btn_css"
-                
+                alt=""
                 />
               {/* </li> */}
             </div>
