@@ -44,7 +44,15 @@
     aspect-ratio: auto;
 
 }
-
+@media (max-width:1120px) and (min-width:921px){
+    .offerings_lineDraw_img{
+        left:74%;
+        right:25%;
+        top:85%;
+        /* bottom:65%; */
+        aspect-ratio: auto;
+    
+    }}
 @media (max-width:920px){
     .offerings_title{
         font-size: var(--text-low-medium);

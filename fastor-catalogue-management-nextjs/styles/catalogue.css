@@ -17,6 +17,7 @@
     font-weight:600;
     font-size: var(--text-medium);
     color: #7B7D8A;
+    width:70%;
 }
 
 .catalogue_img_line{
@@ -36,12 +37,16 @@ bottom: -49.%;
     margin-top: 7rem;
     /* font-family: var(--primary-font); */
 }
+.catalogue_data_left{
+    max-width:50%;
+}
 .catalogue_data_right{
     width:55%;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    width:50%;
 }
 .catalogue_data_right_inner_container{
     display: flex;
@@ -49,19 +54,18 @@ bottom: -49.%;
     align-items: center;
     gap:28px;
     padding-left:0.5rem;
-
 }
 .catalogue_data_right_description{
     font-size: var(--text-low-medium);
     font-weight: 600;
     line-height: 33px;
-    width:500px;
+    width:90%;
     min-height:68px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-height: fit-content;
-    color:#3F4255
+    color:#3F4255;
 
 }
 .catalogue_data_right_inner_container:hover{
@@ -70,16 +74,40 @@ bottom: -49.%;
     border-radius: 12px;
 }
 
+@media (max-width:1200px) and (min-width:921px){
+    .catalogue_data_left{
+        width:50%;
+    }
+    .catalogue_data_left>img{
+        width:100%;
+    }
+}
 
-@media (max-width:1300px) and (min-width:921px){
+@media (max-width:1320px) and (min-width:1100px){
     .catalogue_img_line>img{
-        width:93%;
+        width:80%;
         height:100%;
     }
     .catalogue_img_line{
         padding-left: 2rem;
         height:400px;
         margin-right: -2rem;
+        width:600px;
+        left:60%;
+    }
+}
+@media (max-width:1100px) and (min-width:921px){
+    .catalogue_img_line>img{
+        width:80%;
+        height:100%;
+    }
+    .catalogue_img_line{
+        padding-left: 2rem;
+        height:400px;
+        margin-right: -2rem;
+        width:600px;
+        left:55%;
+        top:10%;
     }
 }
 
@@ -93,17 +121,19 @@ bottom: -49.%;
     }    
     .catalogue_img_line{
         left: 27.89%;
-        right: -4.97%;
+        right: 0%;
         top:30%;
         bottom: -49%;
         width:50%;
     }
     .catalogue_img_line>img{
         height:70%;
-        width:90%;
+        width:80%;
+
     }
     .catalogue_main_description{
         font-size: var(--text-low-medium);
+        width:90%;
     }
 
 
@@ -115,6 +145,16 @@ bottom: -49.%;
         align-items: center;
         width:95%;
         padding-top: 1.5rem;
+    }
+    .catalogue_data_left{
+        width:fit-content;
+        margin-left: -2%;
+        height:300px;
+        width:600px;
+    }
+    .catalogue_data_left>img{
+        width:100%;
+        height:100%;
     }
     .catalogue_data_right{
        box-sizing: border-box;

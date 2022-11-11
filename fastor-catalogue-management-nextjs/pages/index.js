@@ -13,7 +13,8 @@ import greenTick from "../public/greenTick.png";
 
 // offerings
 import lineDrawImgBlue from "../public/lineDrawImgBlue.png";
-import offeringsImg from "../public/offeringImg.png";
+// import offeringsImg from "../public/offeringImg.png";
+import offeringsImg from "../public/offerings.svg";
 import macbookImg from "../public/DeviceMacbook.png";
 import ManageCatalogue from "../public/ManageCatalogue2.png";
 
@@ -615,9 +616,9 @@ const formSubmit=(e)=>{
 
     {/* <!--footer start--> */}
     <footer>
-      {/* <div style={{width:"100%"}}> */}
-      <Image className="marginScalingImg" width="auto" src={footerUp} alt="steps"/>
-      {/* </div> */}
+    <div className="footer_middle_img">
+      {/* <Image className="marginScalingImg" src={footerUp} alt="steps"/> */}
+      </div>
       <div className="footer__container">
         <div className="footer__bg_wrapper"></div>
         <div className="footer__left">
