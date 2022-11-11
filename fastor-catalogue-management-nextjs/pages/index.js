@@ -201,7 +201,7 @@ const formSubmit=(e)=>{
               /></button>
           </Link>
           {/* <!-- uncomment for hamburger/menu --> */}
-          {/* <!-- <img
+           {/* <img
             className="header__hamburger_menu"
             onclick="menuClicked()"
             src="img/hamburgerMenu.svg"
@@ -212,7 +212,7 @@ const formSubmit=(e)=>{
             onclick="closeMenu()"
             src="img/hamburgerClose.svg"
             alt="hamburgerClose"
-          /> --> */}
+          />  */}
         </div>
         <nav className="header__nav">
           <ul>

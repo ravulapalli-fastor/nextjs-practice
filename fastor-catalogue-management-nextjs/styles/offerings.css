@@ -1,8 +1,8 @@
 
 .offerings_main_container{
     width:92%;
-    font-family: var(--primary-font);
-    margin:5% auto;
+    /* font-family: var(--primary-font); */
+    margin:8rem auto;
     position:relative;
 }
 
@@ -10,6 +10,8 @@
     font-size: var(--text-xlarge);
     font-weight: 700;
     text-align:center;
+    color:#3F4255
+
 }
 
 .offerings_data_img{

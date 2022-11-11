@@ -1,5 +1,5 @@
 .catalogue_main_container{
-    font-family: var(--primary-font);
+    /* font-family: var(--primary-font); */
     width:85%;
     margin:auto;
     font-style: normal;
@@ -11,6 +11,7 @@
 .catalogue_main_title{
     font-size: 80px;
     font-weight: 700;
+    color:#3F4255
 }
 .catalogue_main_description{
     font-weight:600;
@@ -20,7 +21,7 @@
 
 .catalogue_img_line{
 position: absolute;
-left: 79.89%;
+left: 75.89%;
 right: -6.97%;
 top:-30%;
 bottom: -49.%;
@@ -33,7 +34,7 @@ bottom: -49.%;
     height:750px;
     max-height: max-content;
     margin-top: 7rem;
-    font-family: var(--primary-font);
+    /* font-family: var(--primary-font); */
 }
 .catalogue_data_right{
     width:55%;
@@ -56,9 +57,12 @@ bottom: -49.%;
     line-height: 33px;
     width:500px;
     min-height:68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-height: fit-content;
-    align-content: center;
-    color:#3F4255;
+    color:#3F4255
+
 }
 .catalogue_data_right_inner_container:hover{
     border: 1px solid #DFDFDF;
@@ -67,21 +71,36 @@ bottom: -49.%;
 }
 
 
-
+@media (max-width:1300px) and (min-width:921px){
+    .catalogue_img_line>img{
+        width:93%;
+        height:100%;
+    }
+    .catalogue_img_line{
+        padding-left: 2rem;
+        height:400px;
+        margin-right: -2rem;
+    }
+}
 
 /* mobile view */
 @media (max-width:920px){
     .catalogue_main_title{
-        font-size:var(--text--xxxlarge);
+        font-size:var(--text-xxxlarge);
     }
     .catalogue_header_container{
         height:420px;
     }    
     .catalogue_img_line{
-        left: 18.89%;
+        left: 27.89%;
         right: -4.97%;
         top:30%;
-        bottom: -49.%;
+        bottom: -49%;
+        width:50%;
+    }
+    .catalogue_img_line>img{
+        height:70%;
+        width:90%;
     }
     .catalogue_main_description{
         font-size: var(--text-low-medium);
@@ -94,14 +113,18 @@ bottom: -49.%;
         margin:auto;
         height:max-content;
         align-items: center;
-        width:100%;
+        width:95%;
         padding-top: 1.5rem;
     }
     .catalogue_data_right{
-        width:100%;
-        align-items: center;
+       box-sizing: border-box;
+       width:100%;
+        height:fit-content;
+        align-items: flex-start;
     }
     .catalogue_data_right_description{
+        width:100%;
+        height:fit-content;
         font-size: var(--text-small);
     }
 

@@ -71,12 +71,12 @@
 }
 .reviews_data_title{
     font-weight: 600;
-    font-family: var(--primary-font);
+    /* font-family: var(--primary-font); */
     font-size: 22px;
 }
 .reviews_data_sub_title{
     font-weight: 400;
-    font-family: var(--primary-font);
+    /* font-family: var(--primary-font); */
     font-size: 14px;
 }
 #reviews_img_4{
@@ -111,9 +111,8 @@
   }
   
   
-
 @media (max-width:920px){
     .reviews_title{
-        font-size: var(--text-low-medium);
+        font-size: var(--text-medium);
     }
 }

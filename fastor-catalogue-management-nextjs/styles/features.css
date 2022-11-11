@@ -12,6 +12,8 @@
     color: var(--color-text);
     margin: 0;
     padding: 0;
+    color:#3F4255
+
 }
 .features__description{
     font-size: var(--text-low-medium);
@@ -77,7 +79,7 @@
     font-size: var(--text-xsmall);
 }
 .features__row{
-    gap: .2rem;
+    gap: .5rem;
 }
 .features__card_container{
     gap: .7rem;
