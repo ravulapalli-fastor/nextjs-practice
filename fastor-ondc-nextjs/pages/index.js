@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link';
+import Ondcbutton from '../components/Ondcbutton';
 
 // images
 import lineDrawOrangeImg from "../public/lineDrawImg.png";
@@ -10,9 +11,14 @@ import benifitsImg1 from "../public/benifitsImg1.png";
 import benifitsImg2 from "../public/benifitsImg2.png";
 import benifitsImg3 from "../public/benifitsImg3.png";
 import benifitsImg4 from "../public/benifitsImg4.png";
-import rightArrow from "../public/arrow-right.svg";
-import Ondcbutton from '../components/Ondcbutton';
 
+import rightArrow from "../public/arrow-right.svg";
+
+import lineUp from "../public/line_top.svg";
+import lineMiddle from "../public/line_st.svg";
+import lineDown from "../public/line_bottom.svg";
+
+import ProfileImg from "../public/reviewProfileImg.png";
 
 export default function Home(){
 
@@ -36,11 +42,12 @@ export default function Home(){
       alt=""
       />
       </div>
-
     </div>
     {/* ondc data section start */}
+    <div className="benefits_header_container">
     <h1 className="benefits_title">Benefits of selling on ONDC</h1>
     <Image className="orange_solid_line"width="auto" height="auto" alt="" src={orangeLineSolidImg}/>
+    </div>
     <section className="ondc_data_container">
       <div className="ondc_data_left">
         <Image
@@ -144,10 +151,15 @@ export default function Home(){
           width="100"
           height="200"
           alt="ondc_fastor"
-          style={{margin:"8% 28%"}}
+          // style={{margin:"8% 28%"}}
           />
         </div>
       </div>
+    <div className='ondc_circle_lines_container'>
+      <Image src={lineUp} alt="" width="auto" height="auto"/>
+      <Image src={lineMiddle}alt="" width="auto" height="auto"/>
+      <Image src={lineDown}alt="" width="auto" height="auto"/>
+    </div>
     <div className="ondc_circle_btns_container">
       <Ondcbutton data="Get a customised seller dashboard for ONDC orders"
        color="#7B7D8A"/>
@@ -162,12 +174,11 @@ export default function Home(){
     <div className='works_container'>
     <h1 className="works_title">How it works</h1>
     <section className="ondc_data_container works_inner_container">
-      <div className="ondc_data_left">
+      <div className="works_data_left">
       <Image
-          style={{paddingTop:"1.5rem"}}
           src={"/../public/ondcProductImg2.png"}
-         width="518"
-         height="508"
+         width="508"
+         height="500"
          alt=""
         />
       </div>
