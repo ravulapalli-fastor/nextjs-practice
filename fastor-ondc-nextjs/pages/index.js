@@ -19,11 +19,22 @@ import lineMiddle from "../public/line_st.svg";
 import lineDown from "../public/line_bottom.svg";
 
 import ProfileImg from "../public/reviewProfileImg.png";
+import Reviews from '../components/Reviews';
+import Footer from '../components/Footer';
+import Features from '../components/Features';
+import Faq from '../components/Faq';
+import Header from '../components/Header';
 
 export default function Home(){
 
+
+
+
   return (
     <>
+
+    <Header/>
+    
       <div className='ondc_main_container'>
 
       <div className="ondc_header_container">
@@ -129,7 +140,7 @@ export default function Home(){
         <p className="btn_data">
           Enable ONDC access for your store and reach million of people
         </p>
-        <Link className="header__mobile_btn" href="#">
+        <Link className="ondc_btn" href="#">
             <button id="ondc_btn_id" className="btn btn-primary">
               Get Started
               <Image style="display: inline-block; margin-left: 0.5rem" 
@@ -147,17 +158,28 @@ export default function Home(){
       <div className='ondc_circle_dots_box'>
         <div className='ondc_circle_inner_box'>
           <Image
+          className="ondc_fastor"
           src="/../public/ondc_fastor_img.png"
-          width="100"
-          height="200"
+          width="33"
+          height="68"
           alt="ondc_fastor"
           // style={{margin:"8% 28%"}}
           />
+          {/* <Image
+          src="/../public/ondcFastorMobile.svg"
+          width="33"
+          height="68"
+          alt="ondc_fastor"
+          // style={{margin:"8% 28%"}}
+          /> */}
         </div>
       </div>
     <div className='ondc_circle_lines_container'>
       <Image src={lineUp} alt="" width="auto" height="auto"/>
-      <Image src={lineMiddle}alt="" width="auto" height="auto"/>
+      <div className='ondc_circle_middleLine_container'>
+        <div className='line_dot'>..</div>
+        <Image className="middle_line"src={lineMiddle}alt="" width="auto" height="auto"/>
+      </div>
       <Image src={lineDown}alt="" width="auto" height="auto"/>
     </div>
     <div className="ondc_circle_btns_container">
@@ -169,6 +191,9 @@ export default function Home(){
        color="#3766DE"/>
     </div>
     </div>
+
+    {/* reviews section start */}
+    <Reviews/>
 
     {/* ondc data section 2 start */}
     <div className='works_container'>
@@ -195,11 +220,14 @@ export default function Home(){
     </section>
     </div>
           {/* button container 2*/}
-          <div className="benefits_below_btn_container btn_container2">
+          <div className="btn_container_wrapper">
+      <div className="button_container_bg_wrapper">    </div>
+      <div className="button_container_bg_wrapper wrapper_2">    </div>
+        <div className="benefits_below_btn_container btn_container2">
         <p className="btn_data">
           Enable ONDC access for your store and reach million of people
         </p>
-        <Link className="header__mobile_btn" href="#">
+        <Link className="ondc_btn" href="#">
             <button id="ondc_btn_id" className="btn btn-primary">
               Get Started
               <Image style="display: inline-block; margin-left: 0.5rem" 
@@ -209,10 +237,17 @@ export default function Home(){
               alt="arrow-right"/>
             </button>
         </Link>
+        </div>
+        </div>
     </div>
 
-
+    <div className="features_and_faq">
+      <Features/>
+      <div className="faq_bg"></div>
+      <Faq/>
     </div>
+
+    <Footer/>
     </>
   )
 

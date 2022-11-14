@@ -6,10 +6,7 @@
     margin:auto;
     font-style: normal;
     color:#3F4255;
-    height:max-content;
-    padding-bottom: 500px;
-    border:1px solid red;
-
+    height:fit-content;
 }
 
 .ondc_header_container{
@@ -126,6 +123,7 @@ width:85%;
  padding:2rem;
 }
 
+
 .btn_data{
     font-size: var(--text-large);
     font-weight: 700;
@@ -134,7 +132,7 @@ width:85%;
     margin:auto;
     text-align: center;
 }
-.header__mobile_btn{
+.ondc_btn{
     display: flex;
 flex-direction: row;
 align-items: flex-start;
@@ -156,7 +154,7 @@ padding-left: 15%;
     margin-top:2rem;
 }
 .works_data_left>img{
-
+    width:100%;
     height:500px;
 }
 .works_title{
@@ -170,7 +168,8 @@ padding-left: 15%;
     display:flex;
     flex-direction:column;
     gap:32px;
-    width:620px;
+    max-width:620px;
+    min-width:50%;
     height:500px;
     align-items: flex-start;
 } 
@@ -185,11 +184,48 @@ padding-left: 15%;
     padding-left: 0;
 }
 
+/* button container 2 */
+.btn_container_wrapper{
+    border:1px solid transparent;
+    position:relative;
+}
+.button_container_bg_wrapper{
+    position:absolute;
+   /* border:1px solid red; */
+   height:200px;
+   width:280px;
+   margin:auto;
+   background: url("../public/circleLeftBg.svg");
+   background-position:right;
+   background-repeat: no-repeat;
+   margin-top:-2rem;
+   /* transform: matrix(-1, -0.09, -0.09, 1, 0, 0); */
+
+}
+.wrapper_2{
+    background: url("../public/circleRightBg.svg");
+    background-position:left;
+    width:280px;
+    height:280px;
+    position:absolute;
+    right:2rem;
+    bottom:5rem;
+    top:1rem;
+    /* transform: matrix(0.56, 0.83, 0.83, -0.56, 0, 0); */
+}
 .btn_container2{
     flex-direction: row;
+    position:relative;
+    margin-top:5rem;
 }
 
 
+/* faq and features bg wrapper */
+.features_and_faq{
+    background: url("../public/orangeLineBg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 /* mobile view */
 @media (max-width:920px){
@@ -201,7 +237,7 @@ padding-left: 15%;
     }
 
     .ondc_header_container,.benefits_header_container{
-        width:100%;
+        width:90%;
         height:fit-content;
         flex-direction:column ;
         align-items: center;
@@ -243,14 +279,18 @@ padding-left: 15%;
     .ondc_data_right{
         width:70%;
         align-items: center;
+        margin:auto;
     }
     .ondc_data_right_description{
         font-size: var(--text-small);
+        text-align: center;
     }
 
     .btn_data{
        font-size: var(--text-low-medium);
     }
 
-
+   .btn_container2{
+    flex-direction: column;
+   }
 }

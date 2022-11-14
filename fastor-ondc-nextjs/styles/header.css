@@ -1,19 +1,23 @@
 .header__container {
-  padding: 0 0 0 8rem;
-  margin: auto;
+  /* padding: 0 0 3rem 8rem; */
+  width: 100%;
+  margin:auto;
   height:800px;
   background-color:#EBEBEB;
   border-top:16px solid var(--color-brand);
-  align-items: center;
-  justify-items: center;
-}
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border:1px solid red; */
+}
 .header__inner_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width:100%;
+  width:90%;
   height:87px;
+  margin-left: 5%;
 }
 .header__logo {
   font-size: 1.5rem;
@@ -56,30 +60,51 @@
 #header__btn_id_desktop{
   height:80px;
   width:12rem;
-  position:relative;
-  top:-5px;
-  left:1rem;
-  right:0rem;
   background:var(--color-brand);
   border-radius: 0%;
   padding-top:1.5rem;
-  overflow: hidden;
+  margin-top: -1rem;
+  margin-right:-3.1rem;
 }
 .header__mobile_btn{
   display: none;
 }
-
-@media (max-width:1054px) and (min-width:920px){
+@media (max-width:1280px) and (min-width:1075px){
   #header__btn_id_desktop{
-    /* left:0rem; */
+    left:0rem;
     width:auto;
-    padding:0 -1.8rem;
-    display:flex;
-    flex-direction: column;
+    margin-right: -2.8rem;
   }
 }
 
-@media (max-width: 920px) {
+@media (max-width:1074px) and (min-width:980px){
+  #header__btn_id_desktop{
+    left:0rem;
+    width:auto;
+    margin-right: -2.5rem;
+  }
+}
+@media (max-width:980px) and (min-width:950px){
+  #header__btn_id_desktop{
+    left:0rem;
+    width:auto;
+    margin-right: -2.2rem;
+    display:flex;
+    flex-direction: column;
+  }
+} 
+@media (max-width:950px) and (min-width:921px){
+  #header__btn_id_desktop{
+    left:0rem;
+    width:auto;
+    margin-right: -1.5rem;
+    display:flex;
+    flex-direction: column;
+    padding-right:0.7rem;
+  }
+}
+
+@media (max-width: 940px) {
   .header__mobile_btn{
     display: block;
   }
@@ -87,8 +112,8 @@
     top:-18px;
   }
     .header__container{
-        padding: 1rem 1rem 5rem 1rem;
-        height:520px;
+        padding: 1rem 0rem 5rem 0rem;
+        height:max-content;
     }
 
   .header__hamburger_menu {
@@ -135,4 +160,9 @@
 }
 .show {
   display: block !important;
+}
+@media (max-width:920px){
+  .header__container{
+    padding-bottom:10rem;
+  }
 }

@@ -1,0 +1,131 @@
+.header__container{
+    border:1px solid red;
+    width: 100%;
+    margin:auto;
+    height:800px;
+    background-color:#EBEBEB;
+    border-top:16px solid var(--color-brand);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+.header__inner_container{
+    display:flex;
+    width:90%;
+    margin-left:10%;
+    justify-content: space-between;
+    align-items: center;
+    border:1px solid rgb(55, 0, 255);
+}
+.header__menu_item {
+    color: var(--color-text);
+  }
+  
+.header__hamburger_menu {
+    cursor: pointer;
+    display: none;
+  }
+  .header__hamburger_close {
+    cursor: pointer;
+  }
+  
+  
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+  }
+.header__nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border:1px solid rgb(132, 250, 114); */
+}
+.header__nav ul{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border:1px solid rgb(132, 250, 114);
+}
+
+.header__nav ul li {
+    list-style: none;
+    margin: 0 1rem;
+    min-width: fit-content;
+}
+#get_started {
+    text-decoration: none;
+    font-size: var(--text-small);
+    font-weight: 600;
+  }
+
+#header__btn_id_desktop{
+    align-self: flex-end;
+    height:83px;
+}
+
+  .header__mobile_btn{
+    display: none;
+  }
+  @media (max-width: 920px) {
+    .header__mobile_btn{
+      display: block;
+    }
+    #header__btn_id{
+      top:-18px;
+    }
+      .header__container{
+          padding: 1rem 1rem 5rem 1rem;
+          height:auto;
+      }
+  
+    .header__hamburger_menu {
+      display: block;
+    }
+    .header__inner_container {
+      flex-direction: column;
+      align-items: flex-start;
+      /* height: 100%; */
+      height:auto;
+    }
+    .header__nav {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
+      margin: 2rem 0;
+    }
+    .header__nav ul {
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-top: 2rem auto;
+    }
+    .header__nav ul li {
+      margin: 0;
+    }
+    .header__nav ul button {
+      display: none;
+    }
+    .header__logo_hamburger {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  .header__hamburger_close {
+    display: none;
+  }
+  .hide {
+    display: none !important;
+  }
+  .show {
+    display: block !important;
+  }
+  
