@@ -42,7 +42,9 @@
     top:95%;
     /* bottom:65%; */
     aspect-ratio: auto;
-
+}
+.mobile_offering{
+    display:none;
 }
 @media (max-width:1120px) and (min-width:921px){
     .offerings_lineDraw_img{
@@ -54,12 +56,24 @@
     
     }}
 @media (max-width:920px){
+    .offerings_main_container{
+        margin-top: 3rem;
+    }
+    .desktop_offering{
+        display:none;
+    }
+    .mobile_offering{
+        display:block;
+        margin:auto;
+        width:330px;
+        margin-top:2rem;
+    }
     .offerings_title{
-        font-size: var(--text-low-medium);
+        font-size: var(--text-medium);
     }
     .offerings_lineDraw_img{
-        top:90%;
-        bottom:55%;
+        bottom:0%;
+         left:0;
         width:180px;
         height:150px;
     }

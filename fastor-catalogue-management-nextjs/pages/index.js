@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 // images
 import logo from "../public/logo.svg";
@@ -13,6 +14,7 @@ import greenTick from "../public/greenTick.png";
 
 // offerings
 import lineDrawImgBlue from "../public/lineDrawImgBlue.png";
+import mobileOffering from "../public/mobileOffering.svg";
 // import offeringsImg from "../public/offeringImg.png";
 import offeringsImg from "../public/offerings.svg";
 import macbookImg from "../public/DeviceMacbook.png";
@@ -43,7 +45,7 @@ import fetureIcon7 from "../public/fetureIcon7.svg";
 import fetureIcon8 from "../public/fetureIcon8.svg";
 import fetureIcon9 from "../public/fetureIcon9.svg";
 
-import FaqPlus from "../public/faqPlusImg.png";
+import FaqPlus from "../public/faqPlusImg.svg";
 
 import footerContact from "../public/footerContact.svg";
 import contactDown from "../public/contactDown.svg";
@@ -188,6 +190,16 @@ const formSubmit=(e)=>{
 
    return (
     <>
+    <Head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap"
+      rel="stylesheet"
+  />
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'/>
+
+    </Head>
       <div className="header__container">
       <header className="header__inner_container">
         <div className="header__logo_hamburger" for="menu__toggle">
@@ -237,8 +249,11 @@ const formSubmit=(e)=>{
           </ul>
         </nav>
       </header>
-            {/* <!-- hero section --> */}
-               <div className="hero__container"> 
+      
+    </div>
+                {/* <!-- hero section --> */}
+                <div class="hero_main_container">
+                <div className="hero__container"> 
                 <Image 
                 className="hero_image_desktop" 
                 src={heroImg} 
@@ -246,31 +261,31 @@ const formSubmit=(e)=>{
                 height="auto"
                 alt=""/>
                </div> 
+               </div>
       
             {/* <!-- hero section end --> */}
-      
-    </div>
+
    
    {/* catalogue section start */}
 
   <div className="catalogue_main_container">
 
-    <div className="catalogue_header_container">
-      <div>
-        <h1 className="catalogue_main_title">Catalogue Management</h1>
-        <p className="catalogue_main_description">
-         Now power up your online business by making shipping easy!
-        </p>
-      </div>
-
-      <div  className="catalogue_img_line">
-      <Image
+      <div class="operations_header_container">
+          <div class="data"> 
+            <h1 class="operations_main_title">Catalogue Management</h1>
+            <p class="operations_main_description">
+            Now power up your online business by making shipping easy!
+            </p>
+          </div>
+        <div class="bg">
+        <Image
       src={lineDrawOrangeImg}
       width="auto"
       height="auto"
       alt=""
       />
       </div>
+
 
     </div>
 
@@ -352,7 +367,7 @@ const formSubmit=(e)=>{
 
       <h1 className="offerings_title">Offerings</h1>
       <Image 
-      className="offerings_data_img"
+      className="offerings_data_img desktop_offering"
       width="auto"
       height="auto"
       alt="offerings data"
@@ -360,16 +375,26 @@ const formSubmit=(e)=>{
       />
       <div className="offerings_macbook_container">
       <Image 
-      className="offerings_macbook_data_img"
+      className="offerings_macbook_data_img desktop_offering"
       width="auto"
       height="auto"
       alt="offerings data"
       src={macbookImg}
       /> 
-      </div>     
+      </div>
+      
+      <div>
+        <Image
+        class="mobile_offering"
+        width="auto"
+        height="auto"
+        src={mobileOffering}
+        />
+      </div>
+     
       <div>
       <Image 
-      className="offerings_lineDraw_img"
+      className="offerings_lineDraw_img "
       width="auto"
       height="auto"
       alt="offerings data"

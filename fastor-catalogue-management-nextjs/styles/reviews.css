@@ -4,6 +4,27 @@
     /* background: #232f3e; */
 }
 
+.reviews_up_bg{
+    background:url("../public/reviewsUP.svg");
+    /* background-position: center; */
+    background-size:cover;
+    width:100vw;
+    height:125px;
+    margin-top: -1rem;
+    margin-bottom:-3rem;
+  }
+  .reviews_down_bg{
+    background:url("../public/reviewsDown.svg");
+    /* background-position: center; */
+    background-size:cover;
+    width:100vw;
+    height:125px;
+    margin-top: -1rem;
+    margin-bottom:-1rem;
+  }
+
+
+
 .reviews_inner_container{
     background: #232f3e;
     margin:auto;
@@ -20,17 +41,19 @@
     justify-content: center;
     height:fit-content;
     height:500px;
+    width:100vw;
 }
 .reviews_data_left_container{
-   width:15%;
+   width:15vw;
    position:relative;
 }
 .reviews_data_right_container{
-    width:15%;
+    width:15vw;
     position:relative;
+    box-sizing: border-box;
 }
 .reviews_data_middle_container{
-    width:45%;
+    width:45vw;
     font-style: normal;
     text-align: center;
     color:var(--secondary-color);
@@ -41,7 +64,7 @@
     position:absolute;
 }
 #reviews_img_1{
-    left: 2%;
+    left: 0%;
     top: 10%;
     right:80%
 }
@@ -52,7 +75,7 @@
 }
 #reviews_img_3{
     bottom: 10%;
-    left:2%;
+    left:0%;
     right:80%;
 }
 #reviews_img_0{
@@ -80,19 +103,19 @@
     font-size: 14px;
 }
 #reviews_img_4{
-    left: 70%;
+    left: 25%;
     top: 5%;
-    right:20%
+    right:0%
 }
 #reviews_img_5{
     top: 35%;
-    left:5%;
+    left:-20%;
     right:45%;
 }
 #reviews_img_6{
     bottom: 15%;
-    left:70%;
-    right:20%;
+    left:25%;
+    right:0%;
 }
 
 .dot {
@@ -115,4 +138,36 @@
     .reviews_title{
         font-size: var(--text-medium);
     }
+    /* .reviews_main_container{
+        margin-top:2rem;
+    } */
+    .reviewsImg{
+        width:58px;
+        height:58px;
+    }
+    .dot{
+        width: 7px;
+        height: 7px;
+    }
+    .reviews_down_bg{
+        margin-top:2rem;
+    }
+    .reviews_up_bg{
+       margin-bottom:-6rem;
+       height:150px;
+       margin-top:-15rem;
+    }
+    .reviews_main_container{
+        margin-top:-2rem;
+    }
+
+}
+@media (max-width:470px){
+    .reviews_data_container{
+        height:max-content;
+    }
+    .reviews_data_left_container,.reviews_data_right_container{
+       margin-left: -2rem;
+    }
+
 }
