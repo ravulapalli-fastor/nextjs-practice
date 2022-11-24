@@ -1,10 +1,14 @@
+.features_and_faq{
+    margin-top:-1rem;
+}
+
 .features__container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 3rem;
-    margin: 3rem auto;
+    margin: 0rem auto 4rem auto;
 }
 .features__title{
     font-size: var(--text-xlarge);
@@ -12,15 +16,14 @@
     color: var(--color-text);
     margin: 0;
     padding: 0;
-    color:#3F4255
-
 }
 .features__description{
     font-size: var(--text-low-medium);
     font-weight: 500;
     color: #54585F;
     margin: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 .features__card_container{
     display: flex;
@@ -47,6 +50,7 @@
     border: 1px solid #CCCCCC;
     max-width: fit-content;
     min-width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 .features__card_title{
     font-size: var(--text-medium);
@@ -60,14 +64,27 @@
     width: 2rem;
     margin-right: .4rem;
 }
+.pos_mobile{
+   display:none;
+}
 
 /* mobile responsive */
 @media (max-width: 920px) {
+    .pos_mobile{
+        display:flex;
+     }
+     .pos_desktop{
+        display:none;
+     }
+    .features__container{
+        margin: 2rem auto;
+    }
 .features__title{
-    font-size: var(--text-low-medium);
+    font-size: var(--text-medium);
 }
 .features__description{
     font-size: var(--text-small);
+    text-align: center;
 }
 .features__card{
     padding: .4rem .5rem;
@@ -79,7 +96,7 @@
     font-size: var(--text-xsmall);
 }
 .features__row{
-    gap: .5rem;
+    gap: .2rem;
 }
 .features__card_container{
     gap: .7rem;

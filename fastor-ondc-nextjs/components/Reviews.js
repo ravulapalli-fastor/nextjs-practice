@@ -1,4 +1,7 @@
 import Image from "next/image";
+import CommaUp from "../public/CommaUp.png";
+import CommaDown from "../public/CommaDown.png";
+import ProfileImg from "../public/reviewProfileImg.png";
 
 
 function Reviews(){
@@ -10,10 +13,11 @@ function Reviews(){
 
             <div className="reviews_profile_container">
                 <Image
-                width="100"
-                height="100"
-                src="/../public/reviewProfileImg.png"
+                width="auto"
+                height="auto"
+                src={ProfileImg}
                  alt=""
+                 class="profileImg"
                 />
                 <div className="reviews_profile_data">
                     <p>James</p>
@@ -23,21 +27,21 @@ function Reviews(){
 
             <div className="reviews_data_right_container">
                 <Image
-                className="commaUp"
-                width="21"
-                height="22"
+                className="commaUp comma"
+                width="auto"
+                height="auto"
                 alt="comma"
-                src="/../public/CommaUp.png"
+                src={CommaUp}
                 />
                 <p>
                 From the moment the crew everything went smoothly and much more quickly than I ever would have expected! Now I have a beautiful water feature, patio, fire pit (that looks like a real tree stump!), and retaining wall in my own backyard! 
                 </p>
                 <Image
-                className="commaDown"
-                width="21"
-                height="22"
+                className="commaDown comma"
+                width="auto"
+                height="auto"
                 alt="comma"
-                src="/../public/CommaDown.png"
+                src={CommaDown}
                 />
             </div>
          </div>

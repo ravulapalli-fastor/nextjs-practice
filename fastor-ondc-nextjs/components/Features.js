@@ -33,7 +33,7 @@ function Features() {
             <Image  className="features__card_img" src={fetureIcon2} alt="feature"/>
             <h3 className="features__card_title">Payments</h3>
           </div>
-          <div className="features__card">
+          <div className="features__card pos_desktop">
             <Image  className="features__card_img" src={fetureIcon3} alt="feature"/>
             <h3 className="features__card_title">POS</h3>
           </div>
@@ -66,6 +66,11 @@ function Features() {
           <Image className="features__card_img" src={fetureIcon8} alt="feature"/>
           <h3 className="features__card_title">Offers &amp; Coupons</h3>
         </div>
+        <div className="features__card pos_mobile">
+            <Image  className="features__card_img" src={fetureIcon3} alt="feature"/>
+            <h3 className="features__card_title">POS</h3>
+          </div>
+
         <div className="features__card">
           <Image className="features__card_img" src={fetureIcon9} alt="feature"/>
           <h3 className="features__card_title">Custom Domain</h3>

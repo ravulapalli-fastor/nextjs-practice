@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import FaqPlus from "../public/faqPlusImg.png";
+import FaqPlus from "../public/faqPlusImg.svg";
 
 const Faq = () => {
   return (

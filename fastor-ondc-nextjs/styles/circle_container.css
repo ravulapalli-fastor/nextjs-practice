@@ -78,7 +78,9 @@
    width:280%;
    flex-grow: 1;
 }
-
+.mobile{
+    display:none;
+}
 
 /* buttons */
 .ondc_circle_btns_container{
@@ -87,11 +89,13 @@
     gap:4rem;
     width:100%;
     padding:1rem;
+    /* border:1px solid red; */
 }
 
 .ondc_circle_btns_container>button:nth-child(2){
     margin-left: 20%;
 }
+
 
 
 @media (max-width:1220px) and (min-width:950px){
@@ -142,60 +146,67 @@
 
 
 @media (max-width:920px){
-   .ondc_fastor{
-    width:40px;
-    height:70px;
-   }
+    .desktop{
+        display:none;
+    }
+
+    .ondc_circle_main_container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width:330px;
+        /* height:675px; */
+        margin-top:4rem
+    }
    .ondc_circle_inner_box{
-      width:85%;
-      height:85%;
-      top:0%;
-      left:0%
+      width:200px;
+      height:200px;
+      top:7%;
+      left:8%
    }
    .ondc_circle_dots_box{
-      min-width:110px;
-      height:110px;
-      margin-top:8%;
-      margin-left: 25%;
+      min-width:258px;
+      max-width:258px;
+      height:258px;
+      margin: auto;
    }
-   .ondc_circle_lines_container>img:nth-child(1){
-    margin-left:-1.5rem; 
-    width:140%;
-  }
-  .ondc_circle_lines_container>img:nth-child(3){
-   margin-left:-1rem;
-   width:140%; 
- }
 
  .ondc_fastor{
-   width:33px;
-   height:68px;
+   width:92px;
+   height:153px;
+   padding-top:0.5rem;
  }
 
- .line_dot{
-    width:1rem;
-    height:.5rem;
-    background-color:#54585F;
-    border-radius: 50%;
-    margin-left:0;
- }
- .middle_line{
-     /* border:1px solid #54585F; */
-     margin-left:-.3rem;
-    width:150%;
-    flex-grow: 1;
- }
- .ondc_circle_btns_container{
-    gap:0.5rem;
- }
- .ondc_circle_lines_container{
-    gap:0rem;
-    width:25%
- }
-
+.mobile{
+    display:block;
+    position:relative;
+    margin:auto;
+   /* margin-left: -1rem; */
+   width:100%;
+   height:415px;
 }
 
-@media (max-width:599px) and (min-width:528px){
+.mobile>img{
+    position: absolute;
+    top:0;
+    left:52%;
+}
+ .ondc_circle_btns_container{
+    position:absolute;
+    gap:3rem;
+    z-index:1;
+    margin:auto;
+    left:-5%;
+ }
+ .ondc_circle_btns_container>button:nth-child(1){
+    margin-top: 2%;
+}
+ .ondc_circle_btns_container>button:nth-child(2){
+    margin-left: 0%;
+}
+}
+
+/* @media (max-width:599px) and (min-width:528px){
  .ondc_circle_dots_box{
     margin-left:15%;
     margin-top:10%;
@@ -219,4 +230,4 @@
     .ondc_circle_btns_container{
         gap:0.2rem;
     }
-}
+} */

@@ -17,15 +17,10 @@
 
 @media (max-width:920px){
     .button_ondc{
-    font-size: var(--text-xsmall);
+    font-size: var(--text-low-medium);
     width:100%;
-    min-height:45px;    
-    width:min(95%,150px);
-}
-}
-@media (max-width:400px){
-    .button_ondc{
-        min-height:45px;    
-        width:98%;
+    min-height:93px;    
+    /* width:300px; */
+    line-height: 120%;
    }
 }
