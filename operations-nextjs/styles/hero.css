@@ -1,0 +1,23 @@
+.hero__container {
+    width:777px;
+    height:437px;
+    margin:2rem auto auto auto;
+   aspect-ratio: 1.78/1;
+   /* background: url("../public/heroBg.png"); */
+} 
+
+
+.hero_image_desktop{
+       width:100%;
+       /* margin-left:-3rem; */
+       /* margin-top:5rem; */
+}
+
+
+/* mobile view */
+@media (max-width: 920px) {
+   .hero__container{
+       width:min(600px,90%);
+       height:307px;
+   }
+}

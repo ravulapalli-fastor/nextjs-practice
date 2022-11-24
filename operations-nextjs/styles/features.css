@@ -12,6 +12,8 @@
     color: var(--color-text);
     margin: 0;
     padding: 0;
+    color:#3F4255
+
 }
 .features__description{
     font-size: var(--text-low-medium);

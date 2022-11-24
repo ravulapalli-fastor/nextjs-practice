@@ -21,7 +21,7 @@
     padding: 0;
   }
   .reviews__card_mobile_container {
-    position: relative;
+    position: absloute;
   }
   .reviews__card_container {
     display: flex;
@@ -48,7 +48,7 @@
     position: absolute;
     width: 5rem;
     height: 5rem;
-    left: 9%;
+    left: 5%;
     top: 48%;
     /* transform: translateY(-50%); */
     z-index: 2;
@@ -65,7 +65,7 @@
     position: absolute;
     width: 5rem;
     height: 5rem;
-    right: 9%;
+    right: 5%;
     top: 48%;
     /* transform: translateY(-50%); */
     z-index: 2;
@@ -77,6 +77,8 @@
     align-items: center;
     cursor: pointer;
   }
+
+
   .reviews__next_btn::after{
       content: "";
       position: absolute;
@@ -127,7 +129,7 @@
 
   .reviews__card_title {
     font-size: 1.3rem;
-    font-family: var( --primary-font);
+    /* font-family: var( --primary-font); */
     min-width: fit-content;
       color: var(--color-text);
       font-weight: 800;
@@ -136,12 +138,13 @@
       line-height:33.6px;
   }
 .reviews__card_description{
-  font-family: var( --primary-font);
+  /* font-family: var( --primary-font); */
   font-weight: 400;
   line-height: 21px;
   width:490px;
   height:100px;
   text-align: center;
+  margin-top: -2%;
 }
 
   
@@ -149,7 +152,6 @@
     cursor: pointer;
     align-items: baseline;
     height: 70px;
-    
     width: 70px;
     margin: 0 0.5rem;
     border: 0.949539px solid #FFFFFF;    
@@ -209,7 +211,7 @@
       margin-top: -2rem;
     }
   .reviews__heading{
-      font-size: var(--text-low-medium);
+      font-size: var(--text-medium);
       text-align: center;
       padding: 0 1rem;
   }
@@ -236,12 +238,12 @@
     /* border:1px solid red; */
   }
   .reviews__card_description{
-    font-size: var(--text-xsmall);
+    font-size: var(--text-small);
     width:80%;
     height:fit-content;
   }
   .reviews__card_title{
-    font-size: var(--text-small);
+    font-size: var(--text-low-medium);
   }
   .reviews__card_container::after{
     bottom:6rem;
@@ -267,6 +269,9 @@
   width:76px;
   height:76px;
   margin:0.2rem auto;
+}
+#review_up_bg{
+  margin-bottom: -4rem;
 }
 
   }

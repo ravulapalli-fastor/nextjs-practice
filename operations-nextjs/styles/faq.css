@@ -3,6 +3,21 @@
     width:85%;
     margin:auto;
 }
+/* .faq_bg{
+    background: url("../public/circlesBg.svg");
+    background-position-x:right;
+    background-repeat: no-repeat;
+    height:280px;
+    margin-top:-10rem;
+    margin-bottom: -5rem;;
+} */
+.faq_title{
+    font-size: var(--text-xlarge);
+    font-weight: 700;
+    text-align:center;
+    color:#3F4255
+
+}
 
 .faq__inner_container{
     display:flex;
@@ -13,7 +28,7 @@
 }
 .faq__card_container{
     /* border:1px solid purple; */
-    width:max(40%,500px);
+    width:min(40%,500px);
     /* height:122px; */
     display:flex;
     justify-content: center;
@@ -39,8 +54,11 @@
         display:block;
         width:90%;
     }
+    .faq_title{
+        font-size: var(--text-low-medium);
+    }
     .faq__card_container{
         width:95%;
-        font-size: var(--text-small);
+        font-size: var(--text-xsmall);
     }
 }

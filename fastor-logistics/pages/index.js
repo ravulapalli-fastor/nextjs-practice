@@ -40,6 +40,13 @@ import Twitter from "../public/Twitter.svg";
 import footerUp from "../public/footerUp.svg";
 import { useEffect, useState } from "react";
 
+import Review1 from "../public/reviewImg1.png";       
+import Review2 from "../public/reviewImg2.png";
+import Review3 from "../public/reviewImg3.png";       
+import Review4 from "../public/reviewImg4.png";
+import Review5 from "../public/reviewImg5.png";
+
+
 
 export default function Home(){
 
@@ -145,11 +152,11 @@ export default function Home(){
       const [initialReviewIndex,setReviewIndex]=useState(Math.floor(reviews_data_obj.length/2));
 
        var userProfileImgArr=[
-        "../public/reviewImg1.png",        
-        "../public/reviewImg2.png",
-        "../public/reviewImg3.png",        
-        "../public/reviewImg4.png",
-        "../public/reviewImg5.png"       
+        "Review1",        
+        "Review2",
+        "Review3",        
+        "Review1",
+        "Review1"       
        ];
       const [profile,setProfile]=useState(userProfileImgArr);
       function displayReviewCard(index){
@@ -179,14 +186,13 @@ export default function Home(){
         displayReviewCard(initialReviewIndex);
     },[initialReviewIndex])
             // scroll left
-            function scrollLeftOnClicked(elmentClassName) {
-                var container = document.querySelector(`.${elmentClassName}`);
+            function scrollLeftOnClicked(elmentclassName) {
+                var container = document.querySelector(`.${elmentclassName}`);
                 // sideScroll(container, "right", 5, 600, 5);
                 let profileNew=[...profile];
                 if(initialReviewIndex<reviews_data_obj.length-1){
                   setReviewIndex(prev=>prev+1);
                   let lastImg=profileNew.shift();
-                  console.log(lastImg,profileNew,"initial")
                   profileNew.push(lastImg);
                   setProfile(profileNew);
                 }
@@ -199,19 +205,17 @@ export default function Home(){
                 // }
                 displayReviewCard(initialReviewIndex);
                 // setProfile(profileNew);
-                console.log(initialReviewIndex,profile,"indjkdh")
               }
               
               // scroll right
-              function scrollRightOnClicked(elmentClassName) {
-                var container = document.querySelector(`.${elmentClassName}`);
+              function scrollRightOnClicked(elmentclassName) {
+                var container = document.querySelector(`.${elmentclassName}`);
                 // sideScroll(container, "left", 5, 600, 5);
                 let profileNew=[...profile];
                 if(initialReviewIndex>0){
                   setReviewIndex(prev=>prev-1);
                   let lastImg=profileNew.pop();
                   profileNew.unshift(lastImg);
-                  console.log(initialReviewIndex,"secRigh")
                   setProfile(profileNew);
                 }
                 
@@ -220,47 +224,47 @@ export default function Home(){
               }
     return (
         <div>
-            <div class="header__container">
-      <header class="header__inner_container">
-        <div class="header__logo_hamburger" for="menu__toggle">
-          <Image class="header__logo" src={logo} alt="logo" />
-          <Link class="header__mobile_btn" href="https://becho.fastor.ai/"
-            ><button id="header__btn_id" class="btn btn-primary">
+            <div className="header__container">
+      <header className="header__inner_container">
+        <div className="header__logo_hamburger" for="menu__toggle">
+          <Image className="header__logo" src={logo} alt="logo" />
+          <Link className="header__mobile_btn" href="https://becho.fastor.ai/">
+            <button id="header__btn_id" className="btn btn-primary">
               Get Started
               <Image
-                style="display: inline-block; margin-left: 0.5rem"
+                style={{display: "inline-block", marginLeft: "0.5rem"}}
                 src={ArrowRight}
                 alt="arrow-right"
-              /></button
-          ></Link>
+              /></button>
+          </Link>
           {/* <!-- uncomment for hamburger/menu --> */}
           {/* <!-- <img
-            class="header__hamburger_menu"
+            className="header__hamburger_menu"
             onclick="menuClicked()"
             src="img/hamburgerMenu.svg"
             alt="hamburgerMenu"
           />
           <img
-            class="header__hamburger_close"
+            className="header__hamburger_close"
             onclick="closeMenu()"
             src="img/hamburgerClose.svg"
             alt="hamburgerClose"
           /> --> */}
         </div>
-        <nav class="header__nav">
+        <nav className="header__nav">
           <ul>
-            <li><Link class="header__menu_item" href="#">Product</Link></li>
-            <li><Link class="header__menu_item" href="#">Businesses</Link></li>
-            <li><Link class="header__menu_item" href="#">Channels</Link></li>
-            <li><Link class="header__menu_item" href="#">Pricing</Link></li>
-            <li><Link class="header__menu_item" href="#">Learn</Link></li>
-            <li><Link class="header__menu_item" href="#">About</Link></li>
+            <li><Link className="header__menu_item" href="#">Product</Link></li>
+            <li><Link className="header__menu_item" href="#">Businesses</Link></li>
+            <li><Link className="header__menu_item" href="#">Channels</Link></li>
+            <li><Link className="header__menu_item" href="#">Pricing</Link></li>
+            <li><Link className="header__menu_item" href="#">Learn</Link></li>
+            <li><Link className="header__menu_item" href="#">About</Link></li>
             <li>
               <Link href="https://becho.fastor.ai/"
-                ><button id="header__btn_id_desktop" class="btn btn-primary">
+                ><button id="header__btn_id_desktop" className="btn btn-primary">
                   Get Started
                   <Image
-                    style="display: inline-block; margin-left: 0.5rem"
+                    style="display: inline-block; margin-left: 0.8rem"
                     src={ArrowRight}
                     alt="arrow-right"
                   /></button
@@ -270,29 +274,30 @@ export default function Home(){
         </nav>
       </header>
             {/* <!-- hero section --> */}
-              {/* <!-- <div class="hero__container"> --> */}
-                <Image class="hero_image_desktop" src={LaptopImg} alt=""/>
+              {/* <!-- <div className="hero__container"> --> */}
+                <Image className="hero_image_desktop" src={LaptopImg} alt=""/>
+                <Image className="hero_image_mobile" src={LaptopImg} alt=""/>
               {/* <!-- </div> --> */}
       
             {/* <!-- hero section end --> */}
       
     </div>
 
-    <div class="main-container">
+    <div className="main-container">
 
         <div>
         {/* <!--first row start--> */}
-        <div class="logistics__inner_container">
-          <div class="logistics__inner_left_container">
-            <h3 class="logistics_main_title">Logistics</h3>
-            <p class="logistics_main_title_description">
+        <div className="logistics__inner_container">
+          <div className="logistics__inner_left_container">
+            <h3 className="logistics_main_title">Logistics</h3>
+            <p className="logistics_main_title_description">
               Now power up your online business by making shipping easy!
             </p>
         </div>
         <div id="logistics_linedraw_img_id">
         <Image 
           src={LineDraw} 
-          style={{margin:"-3% 0% -5% 0%"}}
+          style={{margin:"-3% -2% -5% 0%"}}
           alt=""
         />
       </div>
@@ -300,39 +305,39 @@ export default function Home(){
 
       {/* <!--first row end--> */}
       {/* <!--benefits section start--> */}
-      <div class="benefits_card_main_container">
-        <h3 class="benefits_title">Benefits</h3>
-        <div class="benefits_card_container">
-          <div class="benefits_card_image" >
+      <div className="benefits_card_main_container">
+        <h3 className="benefits_title">Benefits</h3>
+        <div className="benefits_card_container">
+          <div className="benefits_card_image" >
           <Image src={Rectangle} alt=""/>
           </div>
-            <div class="benefits_card_data_container">
-            <h3 class="benefits_card_data_title">Sell your Products Nationwide</h3>
-            <p class="benefits_card_data_description">
+            <div className="benefits_card_data_container">
+            <h3 className="benefits_card_data_title">Sell your Products Nationwide</h3>
+            <p className="benefits_card_data_description">
               For customers, payment is the most important part while shopping online. we make it very easy for userd to make payment. Now get the best payment experience with us for both buyer and seller. 
             </p>
           </div>
         </div>
 
-        <div class="benefits_card_container reverse_flex">
-          <div class="benefits_card_image" >
+        <div className="benefits_card_container reverse_flex">
+          <div className="benefits_card_image" >
           <Image src={Rectangle} alt=""/>
           </div>
-          <div class="benefits_card_data_container align_right" >
-            <h3 class="benefits_card_data_title">Reduce Hassle of Delivery</h3>
-            <p class="benefits_card_data_description">
+          <div className="benefits_card_data_container align_right" >
+            <h3 className="benefits_card_data_title">Reduce Hassle of Delivery</h3>
+            <p className="benefits_card_data_description">
               For customers, payment is the most important part while shopping online. we make it very easy for userd to make payment. Now get the best payment experience with us for both buyer and seller. 
             </p>
           </div>
         </div>
 
-        <div class="benefits_card_container">
-          <div class="benefits_card_image" >
+        <div className="benefits_card_container">
+          <div className="benefits_card_image" >
             <Image src={Rectangle} alt=""/>
           </div>
-            <div class="benefits_card_data_container">
-            <h3 class="benefits_card_data_title">Better Customer Experience</h3>
-            <p class="benefits_card_data_description">
+            <div className="benefits_card_data_container">
+            <h3 className="benefits_card_data_title">Better Customer Experience</h3>
+            <p className="benefits_card_data_description">
               For customers, payment is the most important part while shopping online. we make it very easy for userd to make payment. Now get the best payment experience with us for both buyer and seller. 
             </p>
           </div>
@@ -340,8 +345,8 @@ export default function Home(){
       </div>
       {/* <!--benefits section end--> */}
       {/* <!--delivery section start--> */}
-      <div class="delivery_main_container">
-        <h3 class="logistics_title">Our Delivery Patners</h3>
+      <div className="delivery_main_container">
+        <h3 className="logistics_title">Our Delivery Partners</h3>
         <Image  src={deliveryPatnersImg} alt=""/>
       </div>
 
@@ -353,44 +358,46 @@ export default function Home(){
         <Image
           style={{width: "100%"}}
           src={StoreNeedUp}
-          // class="reviewBgMargin"
-
+          // className="reviewBgMargin"
+          id="review_up_bg"
           alt=""
         />
         {/* <!--reviews carousel start--> */}
-        <div class="reviews__container">
-          <h1 class="reviews__heading">
+        <div className="reviews__container">
+          <h1 className="reviews__heading">
             What people say about Us.
           </h1>
           <div>
-            
-          <div class="reviews__card_container">
-            <div class="reviews__next_btn" onClick={()=>scrollRightOnClicked('reviews__card_container')}>
-              {/* <i style={{marginLeft: "-0.2rem"}} class="fa fa-angle-left"></i> */}
+
+          <div className="reviews__card_container">
+            <div className="reviews__next_btn" onClick={()=>scrollRightOnClicked('reviews__card_container')}>
+              <i style={{marginLeft: "-0.2rem"}} className="fa fa-angle-left">
               <Image
               width="20"
               height="30"
               alt=""
               src="/../public/toLeftIcon.png"
               />
+              </i> 
             </div>
-            <div class="reviews__prev_btn" onClick={()=>scrollLeftOnClicked('reviews__card_container')}>
-              {/* <i style={{marginRight: "-0.2rem"}} class="fa fa-angle-right"></i> */}
+            <div className="reviews__prev_btn" onClick={()=>scrollLeftOnClicked('reviews__card_container')}>
+              <i style={{marginRight: "-0.2rem"}} className="fa fa-angle-right">
               <Image
               width="20"
               height="30"
               alt=""
               src="/../public/toRightIcon.png"
-              />            
+              /> 
+              </i>           
             </div>
-            <div class="reviews__card_mobile_container"></div>
+            <div className="reviews__card_mobile_container"></div>
           </div>
 
-          <div style={{textAlign:"center"}} class="user_profile_main_container">
+          <div style={{textAlign:"center"}} className="user_profile_main_container">
           
           {profile?.map((e)=>(
-            <span class="user_profile_container" >
-              <Image class="user_profile_img" id="profile_img1"
+            <span className="user_profile_container" >
+              <Image className="user_profile_img" id="profile_img1"
               width="100" height="100" alt={e}
               src={`/${e}`}
               />
@@ -404,7 +411,7 @@ export default function Home(){
         <Image
           style={{width: "100%"}}
           src={StoreNeedDown}
-          class="reviewBgMargin"
+          className="reviewBgMargin"
           alt=""
         />
       </section>
@@ -413,29 +420,29 @@ export default function Home(){
 
 
     {/* <!--simplify section start--> */}
-      <div class="simplify__container">
-        <h3 class="logistics_title">How we simplify logistics for you</h3>
-        <div class="simplify__inner_container">
+      <div className="simplify__container">
+        <h3 className="logistics_title">How we simplify logistics for you</h3>
+        <div className="simplify__inner_container">
 
-          <div class="simplify__card_container">
+          <div className="simplify__card_container">
             <Image style={{marginLeft: "35%"}} src={BlueTruck} alt=""/>
             <p style={{textAlign: "center"}}>
               Deliver to 27000+ pincodes
             </p>
           </div>
-          <div class="simplify__card_container">
+          <div className="simplify__card_container">
             <Image style={{marginLeft: "35%"}} src={PurpleTruck} alt=""/>
             <p style={{textAlign: "center"}}>
               Solving complexities of shipping for you
             </p>
           </div>
-          <div class="simplify__card_container">
+          <div className="simplify__card_container">
             <Image style={{marginLeft: "35%"}} src={RedTruck} alt=""/>
             <p style={{textAlign: "center"}}>
               Manage delivery individually if you have your own delivery team            
             </p>
           </div>
-          <div class="simplify__card_container">
+          <div className="simplify__card_container">
             <Image style={{marginLeft: "35%"}} src={BoxTick} alt=""/>
             <p style={{textAlign: "center"}}>
               Provide your customers option of both Pickup and Delivery           
@@ -448,60 +455,60 @@ export default function Home(){
       {/* <!--simplify section end--> */}
 
             {/* <!-- features section --> */}
-            <div class="features__container">
-        <h1 class="features__title">You Name It, We Have It!</h1>
-        <p class="features__description">
+            <div className="features__container">
+        <h1 className="features__title">You Name It, We Have It!</h1>
+        <p className="features__description">
           Everything your Online Business needs...
         </p>
-        <div class="features__card_container">
+        <div className="features__card_container">
           {/* <!-- first row --> */}
-           <div class="features__row">
-                <div class="features__card">
-                <Image  class="features__card_img" src={fetureIcon1} 
+           <div className="features__row">
+                <div className="features__card">
+                <Image  className="features__card_img" src={fetureIcon1} 
                  
                 alt="feature"/>
-                <h3 class="features__card_title">QR Ordering</h3>
+                <h3 className="features__card_title">QR Ordering</h3>
               </div>
-              <div class="features__card">
-                <Image  class="features__card_img" src={fetureIcon2} alt="feature"/>
-                <h3 class="features__card_title">Payments</h3>
+              <div className="features__card">
+                <Image  className="features__card_img" src={fetureIcon2} alt="feature"/>
+                <h3 className="features__card_title">Payments</h3>
               </div>
-              <div class="features__card">
-                <Image  class="features__card_img" src={fetureIcon3} alt="feature"/>
-                <h3 class="features__card_title">POS</h3>
+              <div className="features__card">
+                <Image  className="features__card_img" src={fetureIcon3} alt="feature"/>
+                <h3 className="features__card_title">POS</h3>
               </div>
-              <div class="features__card">
-                <Image class="features__card_img" src={fetureIcon4} alt="feature"/>
-                <h3 class="features__card_title">Logistics</h3>
+              <div className="features__card">
+                <Image className="features__card_img" src={fetureIcon4} alt="feature"/>
+                <h3 className="features__card_title">Logistics</h3>
               </div>
             </div>
 
             
-            <div class="features__row">
-               <div class="features__card">
-                 <Image class="features__card_img" src={fetureIcon5} alt="feature"/>
-                 <h3 class="features__card_title">Online Store</h3>
+            <div className="features__row">
+               <div className="features__card">
+                 <Image className="features__card_img" src={fetureIcon5} alt="feature"/>
+                 <h3 className="features__card_title">Online Store</h3>
                </div>
-               <div class="features__card">
-                 <Image class="features__card_img" src={fetureIcon6} alt="feature"/>
-                <h3 class="features__card_title">Online Ordering</h3>
+               <div className="features__card">
+                 <Image className="features__card_img" src={fetureIcon6} alt="feature"/>
+                <h3 className="features__card_title">Online Ordering</h3>
                </div>
-               <div class="features__card">
-                 <Image class="features__card_img" src={fetureIcon7} alt="feature"/>
-                 <h3 class="features__card_title">Catalogue</h3>
+               <div className="features__card">
+                 <Image className="features__card_img" src={fetureIcon7} alt="feature"/>
+                 <h3 className="features__card_title">Catalogue</h3>
                </div>
            </div>
            
 
           {/* <!-- third row --> */}
-          <div class="features__row">
-            <div class="features__card">
-              <Image class="features__card_img" src={fetureIcon8} alt="feature"/>
-              <h3 class="features__card_title">Offers &amp; Coupons</h3>
+          <div className="features__row">
+            <div className="features__card">
+              <Image className="features__card_img" src={fetureIcon8} alt="feature"/>
+              <h3 className="features__card_title">Offers &amp; Coupons</h3>
             </div>
-            <div class="features__card">
-              <Image class="features__card_img" src={fetureIcon9} alt="feature"/>
-              <h3 class="features__card_title">Custom Domain</h3>
+            <div className="features__card">
+              <Image className="features__card_img" src={fetureIcon9} alt="feature"/>
+              <h3 className="features__card_title">Custom Domain</h3>
             </div>
           </div>
         </div>
@@ -510,41 +517,41 @@ export default function Home(){
 
 
       {/* <!--faq section start--> */}
-    <div class="faq__main_container">
-      <h3 class="logistics_title">FAQ</h3>
-      <div class="faq__inner_container">
-        <div class="faq__card_container">
-          <div class="faq__card_title">
+    <div className="faq__main_container">
+      <h3 className="logistics_title">FAQ</h3>
+      <div className="faq__inner_container">
+        <div className="faq__card_container">
+          <div className="faq__card_title">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </div>
           <Image src={FaqPlus} alt=""/>
         </div>
-        <div class="faq__card_container">
-          <div class="faq__card_title">
+        <div className="faq__card_container">
+          <div className="faq__card_title">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </div>
           <Image src={FaqPlus} alt=""/>
         </div>
-        <div class="faq__card_container">
-          <div class="faq__card_title">
+        <div className="faq__card_container">
+          <div className="faq__card_title">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </div>
           <Image src={FaqPlus} alt=""/>
         </div>
-        <div class="faq__card_container">
-          <div class="faq__card_title">
+        <div className="faq__card_container">
+          <div className="faq__card_title">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </div>
           <Image src={FaqPlus} alt=""/>
         </div>
-        <div class="faq__card_container">
-          <div class="faq__card_title">
+        <div className="faq__card_container">
+          <div className="faq__card_title">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </div>
           <Image src={FaqPlus} alt=""/>
         </div>
-        <div class="faq__card_container">
-          <div class="faq__card_title">
+        <div className="faq__card_container">
+          <div className="faq__card_title">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </div>
           <Image src={FaqPlus} alt=""/>
@@ -556,28 +563,28 @@ export default function Home(){
    </div>
 
     <section id="form-section">
-      <div class="footer__contact_container"
+      <div className="footer__contact_container"
       style={{background:`url(${contactDown})`}}
       >
-        <div class="custom_container flex_center">
-          <div class="footer__contact_left">
+        <div className="custom_container flex_center">
+          <div className="footer__contact_left">
             <Image width="70%" src={footerContact} alt="footerContact"/>
           </div>
-          <div class="footer__contact_right">
-            <div id="footer__contact_form_container_id" class="footer__contact_form_container">
+          <div className="footer__contact_right">
+            <div id="footer__contact_form_container_id" className="footer__contact_form_container">
               <h2>
                 Our Experts manage your store, so that you focus on growing your
                 business
               </h2>
               <div style={{position: "relative"}}>
-                <div class="footer__contact_inputField">
+                <div className="footer__contact_inputField">
                   <form id="footer__contact_input_id" style={{display: "flex",gap: "1rem"}} action="#">
-                    <div class="footer_single_input">
-                      <p class="footer__country_code">+91</p>
+                    <div className="footer_single_input">
+                      <p className="footer__country_code">+91</p>
                       <input id="phone_number" type="tel" placeholder="Enter Contact Number" maxLength="10" minLength="10" onChange={onChange} 
                       onkeyup="this.value = this.value.replace(/[^0-9]/g, '')" required=""/>
                     </div>
-                    <button id="footer__contact_button_id" type="submit" class="btn btn-primary" onClick={(e)=>formSubmit(e)}>
+                    <button id="footer__contact_button_id" type="submit" className="btn btn-primary" onClick={(e)=>formSubmit(e)}>
                       Submit
                     </button>
                   </form>
@@ -587,9 +594,9 @@ export default function Home(){
             </div>
 
             {/* <!-- thankyou message --> */}
-            <div class="footer__contact_form_container footer__contact_success hide">
+            <div className="footer__contact_form_container footer__contact_success hide">
               <Image src={thankyouImg} alt="thankyou" height="70px"/>
-              <div class="footer__contact_inputField">
+              <div className="footer__contact_inputField">
                 <h2>
                   Thanks for submitting your details. We will contact you soon.
                 </h2>
@@ -603,21 +610,22 @@ export default function Home(){
 
     {/* <!--footer start--> */}
     <footer>
-      <Image class="marginScalingImg" src={footerUp} alt="steps"/>
-
-      <div class="footer__container">
-        <div class="footer__bg_wrapper"></div>
-        <div class="footer__left">
+      <div className="footer_middle_img">
+      {/* <Image className="marginScalingImg" src={footerUp} alt="steps"/> */}
+      </div>
+      <div className="footer__container">
+        <div className="footer__bg_wrapper"></div>
+        <div className="footer__left">
           <div>
             <Image src={logo} alt="logo"/>
-            <div class="footer__left_social">
+            <div className="footer__left_social">
               <Image src={instagram} alt="instagram"/>
               <Image src={facebook} alt="facebook"/>
               <Image src={Linkedin} alt="Linkedin"/>
               <Image src={Twitter} alt="Twitter"/>
             </div>
             <li>
-              <Link  href="https://becho.fastor.ai/"><button id="header__btn_id" class="btn btn-primary">
+              <Link  href="https://becho.fastor.ai/"><button id="header__btn_id" className="btn btn-primary">
                   Get Started
                   <Image style={{display:"inline-block",marginLeft: "0.5rem"}} 
                   src={ArrowRight} alt="arrow-right"/></button></Link>
@@ -625,9 +633,9 @@ export default function Home(){
 
           </div>
         </div>
-        <div class="footer__right_desktop">
+        <div className="footer__right_desktop">
           <ul>
-            <li class="footer__menu_heading">Product</li>
+            <li className="footer__menu_heading">Product</li>
             <li><Link href="#">E-Store</Link></li>
             <li><Link href="#">Payment</Link></li>
             <li><Link href="#">Logistics</Link></li>
@@ -637,7 +645,7 @@ export default function Home(){
             <li><Link href="#">Billing</Link></li>
           </ul>
           <ul>
-            <li class="footer__menu_heading">Business</li>
+            <li className="footer__menu_heading">Business</li>
             <li><Link href="#">Restaurant</Link></li>
             <li><Link href="#">Dine-in</Link></li>
             <li><Link href="#">QSR</Link></li>
@@ -647,31 +655,31 @@ export default function Home(){
             <li><Link href="#">Entrepreneur</Link></li>
           </ul>
           <ul>
-            <li class="footer__menu_heading">Channels</li>
+            <li className="footer__menu_heading">Channels</li>
             <li><Link href="#">Direct</Link></li>
             <li><Link href="#">Reseller</Link></li>
             <li><Link href="#">Marketplace</Link></li>
           </ul>
           <ul>
-            <li class="footer__menu_heading">FAQ</li>
+            <li className="footer__menu_heading">FAQ</li>
             <li><Link href="#">Terms and Conditions</Link></li>
             <li><Link href="#">Privacy Policy</Link></li>
             <li><Link href="#">About Us</Link></li>
           </ul>
         </div>
-        <div class="footer__right_mobile">
+        <div className="footer__right_mobile">
           <ul>
-            <li class="footer__menu_heading"><Link href="#">Product</Link></li>
-            <li class="footer__menu_heading"><Link href="#">Business</Link></li>
-            <li class="footer__menu_heading"><Link href="#">Channels</Link></li>
-            <li class="footer__menu_heading"><Link href="#">FAQ</Link></li>
-            <li class="footer__menu_heading"><Link href="#">Term and Conditions</Link></li>
-            <li class="footer__menu_heading"><Link href="#">Privacy Policy</Link></li>
-            <li class="footer__menu_heading"><Link href="#">About Us</Link></li>
+            <li className="footer__menu_heading"><Link href="#">Product</Link></li>
+            <li className="footer__menu_heading"><Link href="#">Business</Link></li>
+            <li className="footer__menu_heading"><Link href="#">Channels</Link></li>
+            <li className="footer__menu_heading"><Link href="#">FAQ</Link></li>
+            <li className="footer__menu_heading"><Link href="#">Term and Conditions</Link></li>
+            <li className="footer__menu_heading"><Link href="#">Privacy Policy</Link></li>
+            <li className="footer__menu_heading"><Link href="#">About Us</Link></li>
           </ul>
         </div>
       </div>
-      <p class="footer__copyright">Copyright 2022</p>
+      <p className="footer__copyright">Copyright 2022</p>
     </footer>
     {/* <!-- foooter end --> */}
 

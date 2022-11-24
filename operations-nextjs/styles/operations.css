@@ -1,0 +1,46 @@
+.operations_main_container{
+    width:100vw;
+
+    border:1px solid green;
+    padding-bottom: 50px;
+}
+.operations_header_container{
+    border:1px solid red;
+
+    background:url("../public/lineDrawImg.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    height:400px;
+    margin:auto;
+    width:90%;
+    margin-left:8%;
+    background-size: contain;
+}
+
+.operations_main_title{
+    font-size: 80px;
+    font-weight: 700;
+    color:var(--color-text) ;
+    width:80%;
+}
+.operations_main_description{
+    font-weight:600;
+    font-size: 28px;
+    color: #7B7D8A;
+}
+
+/* mobile view */
+@media (max-width:920px){
+    .operations_header_container{
+        height:250px;
+        width:98%;
+        margin-left:2%;
+    }
+    .operations_main_title{
+        font-size:var(--text-xxxlarge);
+    }
+    .operations_main_description{
+        font-size: var(--text-low-medium);
+    }
+
+}

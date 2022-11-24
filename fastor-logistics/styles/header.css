@@ -1,18 +1,23 @@
 .header__container {
-  padding: 0 0 3rem 8rem;
-  margin: auto;
+  /* padding: 0 0 3rem 8rem; */
+  width: 100%;
+  margin:auto;
   height:800px;
   background-color:#EBEBEB;
   border-top:16px solid var(--color-brand);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   /* border:1px solid red; */
 }
 .header__inner_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width:100%;
+  width:90%;
   height:87px;
-  /* border:1px solid var(--color-brand); */
+  margin-left: 5%;
 }
 .header__logo {
   font-size: 1.5rem;
@@ -55,27 +60,33 @@
 #header__btn_id_desktop{
   height:80px;
   width:12rem;
-  position:relative;
-  top:-5px;
-  left:1rem;
-  right:0rem;
   background:var(--color-brand);
   border-radius: 0%;
-  padding:0rem;
+  padding-top:1.5rem;
+  margin-top: -1rem;
+  margin-right:-3.25rem;
 }
 .header__mobile_btn{
   display: none;
 }
 
-@media (max-width:1054px) and (min-width:920px){
+
+@media (max-width:1074px) and (min-width:980px){
   #header__btn_id_desktop{
-    /* left:0rem; */
+    left:0rem;
     width:auto;
-    padding:0 -1.8rem;
+    margin-right: -2.5rem;
+  }
+}
+@media (max-width:980px) and (min-width:921px){
+  #header__btn_id_desktop{
+    left:0rem;
+    width:auto;
+    margin-right: -2.5rem;
     display:flex;
     flex-direction: column;
   }
-}
+} 
 
 @media (max-width: 920px) {
   .header__mobile_btn{
