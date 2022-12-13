@@ -160,6 +160,9 @@
   position: relative;
   height: fit-content;
 }
+.underline:hover{
+  text-decoration:underline;
+}
 
 .footer_middle_img{
   background:url("../public/footerUp.svg");

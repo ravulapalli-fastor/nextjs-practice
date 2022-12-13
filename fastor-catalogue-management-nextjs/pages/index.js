@@ -32,7 +32,7 @@ import reviews4 from "../public/reviews4.png";
 import reviews5 from "../public/reviews5.png";
 import reviews6 from "../public/reviews6.png";
 import reviews7 from "../public/reviews7.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // footer
 import fetureIcon1 from "../public/fetureIcon1.svg";
@@ -179,14 +179,16 @@ const formSubmit=(e)=>{
   ]
 
       const [reviewsProfile,setProfile]=useState(reviewsArr);
+      const [dotIndex,setDotIndex]=useState(0);
 
       const handleProfileIndex=()=>{
         let arr=[...reviewsProfile];
          let prev=arr.shift();
          arr.push(prev);
          setProfile(arr);
+         setDotIndex(prev=>prev+1);
+         document.querySelector(".dot1").classList.remove("dot_active");
       }
-
 
    return (
     <>
@@ -214,7 +216,7 @@ const formSubmit=(e)=>{
               /></button>
           </Link>
           {/* <!-- uncomment for hamburger/menu --> */}
-           {/* <img
+           <img
             className="header__hamburger_menu"
             onclick="menuClicked()"
             src="img/hamburgerMenu.svg"
@@ -225,7 +227,7 @@ const formSubmit=(e)=>{
             onclick="closeMenu()"
             src="img/hamburgerClose.svg"
             alt="hamburgerClose"
-          />  */}
+          /> 
         </div>
         <nav className="header__nav">
           <ul>
@@ -407,7 +409,7 @@ const formSubmit=(e)=>{
    {/* offerings section end */}
     
 {/* reviews secrion start */}
-   <section className="reviews_main_container">
+   <section className="reviews_main_container desktop">
    <Image style={{width: "100%", marginBottom: "-5rem"}} src={reviewsUP} alt=""/>
      <div className="reviews_inner_container">
        <h1 className="reviews_title">What people say about Us.</h1>
@@ -452,7 +454,7 @@ const formSubmit=(e)=>{
           {reviewsProfile[0].sub_title}
           </p>
           <div className="reviews_dots_container">
-              <span className="dot" onClick={handleProfileIndex}></span>
+              <span className="dot dot_active" onClick={handleProfileIndex}></span>
               <span className="dot" onClick={handleProfileIndex}></span>
               <span className="dot" onClick={handleProfileIndex}></span>
               <span className="dot" onClick={handleProfileIndex}></span>
@@ -479,10 +481,54 @@ const formSubmit=(e)=>{
         />
         </div>
        </div>
-
-     </div>
+       </div>
      <Image style={{width: "100%", marginTop: "-1.5rem"}} src={reviewsDown} alt=""/>
    </section>
+
+       <div class="mobile">
+       <div class="reviews__container">
+              <h1 class="reviews__heading">
+                What people say about Us.
+              </h1>
+              <div>
+              <div class="reviews__card_container">
+                <div class="reviews__next_btn" onclick="scrollRightOnClicked('reviews__card_container')">
+                  <i style={{marginLeft: "-0.2rem"}} class="fa fa-angle-left"></i>
+                </div>
+                <div class="reviews__prev_btn" onclick="scrollLeftOnClicked('reviews__card_container')">
+                  <i style={{marginLeft: "-0.2rem"}} class="fa fa-angle-right"></i>
+                </div>
+
+                <div class="reviews__card_mobile_container"></div>
+              </div>
+              <div  class="user_profile_main_container">
+                <span class="user_profile_container" >
+                  <Image class="user_profile_img" id="profile_img1"/>
+                </span>
+                <span class="user_profile_container" >
+                  <Image class="user_profile_img" id="profile_img2"/>
+                </span>
+                <span class="user_profile_container" >
+                  <Image class="user_profile_img" id="profile_img3"/>
+                </span>
+                <span class="user_profile_container" >
+                  <Image class="user_profile_img" id="profile_img4"/>
+                </span>
+                <span class="user_profile_container" >
+                  <Image class="user_profile_img" id="profile_img5"/>
+                </span>
+            </div>
+           </div>
+           <div style={{textAlign:"center",marginTop:"2rem"}}>
+            <span class="dot dot1" ></span>
+            <span class="dot dot2" ></span>
+            <span class="dot dot3"></span>
+           </div>
+
+    
+          </div>
+       </div>
+
 {/* reviews section end */}
 
             {/* <!-- features section --> */}
@@ -667,35 +713,35 @@ const formSubmit=(e)=>{
         <div className="footer__right_desktop">
           <ul>
             <li className="footer__menu_heading">Product</li>
-            <li><Link href="#">E-Store</Link></li>
-            <li><Link href="#">Payment</Link></li>
-            <li><Link href="#">Logistics</Link></li>
-            <li><Link href="#">Inventory</Link></li>
-            <li><Link href="#">Sales &amp; Marketing</Link></li>
-            <li><Link href="#">Analytics</Link></li>
-            <li><Link href="#">Billing</Link></li>
+            <li><Link href="#" class='underline'>E-Store</Link></li>
+            <li><Link href="#" class='underline'>Payment</Link></li>
+            <li><Link href="#" class='underline'>Logistics</Link></li>
+            <li><Link href="#" class='underline'>Inventory</Link></li>
+            <li><Link href="#" class='underline'>Sales &amp; Marketing</Link></li>
+            <li><Link href="#" class='underline'>Analytics</Link></li>
+            <li><Link href="#" class='underline'>Billing</Link></li>
           </ul>
           <ul>
             <li className="footer__menu_heading">Business</li>
-            <li><Link href="#">Restaurant</Link></li>
-            <li><Link href="#">Dine-in</Link></li>
-            <li><Link href="#">QSR</Link></li>
-            <li><Link href="#">Takeaway</Link></li>
-            <li><Link href="#">Retail</Link></li>
-            <li><Link href="#">Service</Link></li>
-            <li><Link href="#">Entrepreneur</Link></li>
+            <li><Link href="#" class='underline'>Restaurant</Link></li>
+            <li><Link href="#" class='underline'>Dine-in</Link></li>
+            <li><Link href="#" class='underline'>QSR</Link></li>
+            <li><Link href="#" class='underline'>Takeaway</Link></li>
+            <li><Link href="#" class='underline'>Retail</Link></li>
+            <li><Link href="#" class='underline'>Service</Link></li>
+            <li><Link href="#" class='underline'>Entrepreneur</Link></li>
           </ul>
           <ul>
             <li className="footer__menu_heading">Channels</li>
-            <li><Link href="#">Direct</Link></li>
-            <li><Link href="#">Reseller</Link></li>
-            <li><Link href="#">Marketplace</Link></li>
+            <li><Link href="#" class='underline'>Direct</Link></li>
+            <li><Link href="#" class='underline'>Reseller</Link></li>
+            <li><Link href="#" class='underline'>Marketplace</Link></li>
           </ul>
           <ul>
             <li className="footer__menu_heading">FAQ</li>
-            <li><Link href="#">Terms and Conditions</Link></li>
-            <li><Link href="#">Privacy Policy</Link></li>
-            <li><Link href="#">About Us</Link></li>
+            <li><Link href="#" class='underline'>Terms and Conditions</Link></li>
+            <li><Link href="#" class='underline'>Privacy Policy</Link></li>
+            <li><Link href="#" class='underline'>About Us</Link></li>
           </ul>
         </div>
         <div className="footer__right_mobile">

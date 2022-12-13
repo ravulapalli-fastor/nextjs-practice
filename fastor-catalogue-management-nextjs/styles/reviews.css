@@ -19,7 +19,7 @@
     background-size:cover;
     width:100vw;
     height:125px;
-    margin-top: -1rem;
+    margin-top: -0.5rem;
     margin-bottom:-1rem;
   }
 
@@ -40,7 +40,7 @@
     display:flex;
     justify-content: center;
     height:fit-content;
-    height:500px;
+    height:520px;
     width:100vw;
 }
 .reviews_data_left_container{
@@ -80,7 +80,7 @@
 }
 #reviews_img_0{
     position:static;
-    border:4px solid var(--color-brand);
+    /* border:4px solid var(--color-brand); */
     border-radius:50%;
 }
 .reviews_data_description{
@@ -101,6 +101,7 @@
     font-weight: 400;
     /* font-family: var(--primary-font); */
     font-size: 14px;
+    margin-top:-1rem;
 }
 #reviews_img_4{
     left: 25%;
@@ -123,7 +124,7 @@
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #EE8425;
+    background-color: rgba(255, 104, 26, 0.5);;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -132,7 +133,14 @@
   .active, .dot:hover {
     background-color: #FF661A;
   }
+  .dot_active{
+    background-color: #FF661A;
+  }
+
   
+  .mobile{
+    display:none
+  }
   
 @media (max-width:920px){
     .reviews_title{
@@ -171,3 +179,152 @@
     }
 
 }
+@media (max-width:700px){
+   /* .desktop{
+    display:none;
+   } */
+   .reviews__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:1000px;
+    padding-top:2rem;
+    position: relative;
+    overflow: hidden;
+    background: url("../public/reviewsBg.svg");
+    background-position: center;
+    background-size: cover;
+  
+    height:700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .reviews__heading{
+      font-size: var(--text-medium);
+      text-align: center;
+      padding: 0 1rem;
+      color: var(--secondary-color);
+      margin: 0;
+  }
+  
+  .reviews__card_plus_img_container:first-child {
+    margin-left: 5rem;
+  }
+  .reviews__next_btn {
+    font-size: 2rem;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: var(--color-brand);
+    display: flex;
+    justify-content: center;
+    border-radius: 100%;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .reviews__prev_btn {
+    font-size:2rem;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: var(--color-brand);
+    display: flex;
+    justify-content: center;
+    border-radius: 100%;
+    align-items: center;
+    cursor: pointer;
+  }
+    
+  .reviews__card{
+    min-width:350px;
+    height: 180px;
+    max-width: 60%;
+    margin:auto;
+    /* border:1px solid red; */
+  }
+  .reviews__card_container::after{
+    bottom:16rem;
+    left:49%;
+  }
+  .user_profile_container{
+    width:30px;
+    height:30px;
+  }
+  .user_profile_img{
+    margin-top:2px;
+    width:25px;
+    height:25px;
+  }
+  .active, .user_profile_container:nth-child(3) {
+    width:54px;
+    height:54px;
+  }
+  .active,.user_profile_container:nth-child(3)>.user_profile_img{
+    width:46px;
+    height:46px;
+    margin:.21rem auto;
+  }
+  .reviews__card_description{
+    font-size: var(--text-xsmall);
+  }
+  .reviews__card_title{
+    font-size: var(--text-small);
+  }
+  
+  /* buttons */
+  .reviews__prev_btn_desktop{
+    display:none;
+  }
+  .reviews__next_btn_desktop{
+    display:none;
+  }
+  .reviews_down_bg{
+    margin-top:-0.2rem;
+  }
+  .reviews_up_bg{
+    height:70px;
+  }
+  .dot{
+    width:7px;
+    height: 7px;
+  }
+  }
+  
+  @media (max-width:600px){
+    .reviews__prev_btn{
+       right:0.5rem
+    }
+    .reviews__next_btn{
+      left:0.5rem
+    }
+    .reviews__card{
+      min-width:250px;
+      height: 200px;
+      max-width: 70%;
+      margin:auto;
+      /* border:1px solid red; */
+    }
+    .reviews__card_container::after{
+      bottom:15.5rem;
+    }
+  }
+  @media (max-width:385px){
+    .reviews__card{
+      min-width:200px;
+      height: 200px;
+      max-width: 65%;
+      margin:auto;
+      /* border:1px solid red; */
+    }
+  }
