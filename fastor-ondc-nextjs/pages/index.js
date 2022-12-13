@@ -19,7 +19,7 @@ import Footer from '../components/Footer';
 import Features from '../components/Features';
 import Faq from '../components/Faq';
 import Header from '../components/Header';
-
+import heroImg from "../public/heroImg.png"
 import dottedLine from "../public/circleMobileLine.svg";
 
 import { useEffect } from 'react';
@@ -37,12 +37,24 @@ export default function Home(){
       href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap"
       rel="stylesheet"
   />
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'/>
+    <link href='https://fonts.googleapis.com/css?family=Inter&display=swap' rel='stylesheet'/>
 
     </Head>
 
 
     <Header/>
+    <div className='hero_main_container'>
+    <div className="hero__container"> 
+      <Image 
+      data-aos-delay="800"data-aos="zoom-in-up"
+      className="hero_image_desktop" 
+      src={heroImg}
+      width="auto"
+      height="auto"
+      alt="hero"/>
+  </div> 
+  </div>
+
     
       <div className='ondc_main_container'>
 
@@ -68,7 +80,7 @@ export default function Home(){
     {/* ondc data section start */}
     <div className="benefits_header_container">
     <h1 className="benefits_title">Benefits of selling on ONDC</h1>
-    <Image className="orange_solid_line"width="auto" height="auto" alt="" src={orangeLineSolidImg}/>
+    {/* <Image className="orange_solid_line"width="auto" height="auto" alt="" src={orangeLineSolidImg}/> */}
     </div>
     <section className="ondc_data_container">
       <div className="ondc_data_left">

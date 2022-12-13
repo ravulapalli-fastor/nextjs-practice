@@ -1,6 +1,6 @@
 .reviews_main_container{
     width:100vw;
-    min-height:600px;
+    min-height:650px;
     max-height:fit-content;
     background: url("../public/reviewBg.svg");
     background-size: cover;
@@ -22,13 +22,23 @@
 }
 
 .reviews_data_container{
-    width:60%;
-   margin:4rem auto;
+    width:90%;
+    height:100%;
+    gap:2rem;
+    display:flex;
+    align-items: center;
+}
+.reviews_data_arrow_container{
+    width:80%;
+   margin:0rem auto;
     height:80%;
     gap:2rem;
     display:flex;
     align-items: center;
 
+}
+.reviews__next_btn,.reviews__prev_btn{
+    cursor:pointer
 }
 
 .reviews_profile_container{
@@ -84,10 +94,10 @@
 }
 
 .reviews_dots_container{
-   margin-top:-2rem;
+   margin-top:-1rem;
 }
 .dot {
-    cursor: pointer;
+    /* cursor: pointer; */
     height: 15px;
     width: 15px;
     margin: 0 2px;
@@ -100,7 +110,11 @@
   .active, .dot:hover {
     background-color: #FF661A;
   }
+  .dots__active{
+    background-color: #FF681A;
+  }
   
+   
 
 @media (max-width:920px){
     .reviews_title{
@@ -112,14 +126,16 @@
         margin-top: -1rem;
         gap:1rem;
     }
+    
     .reviews_main_container{
         padding-top: 5%;
         padding-bottom: 10%;
-        min-height:500px;
+        min-height:580px;
     }
     .reviews_data_container{
-        width:75%;
+        width:85%;
     }
+
     .comma{
         width:12px;
         height:12px;
@@ -155,7 +171,7 @@
         height: 7px;
     }
     .reviews_dots_container{
-        margin-top:-4.5rem;
+        margin-top:-2rem;
     }
 
 

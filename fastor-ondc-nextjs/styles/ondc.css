@@ -62,7 +62,7 @@
 /* mobile view */
 @media (max-width:920px){
     .operations_header_container{
-        height:130px;
+        height:170px;
         max-height:max-content;
         width:97%;
         margin-left:2%;
@@ -137,7 +137,7 @@ margin:auto;
     height:fit-content;
     max-height: max-content;
     margin:auto;
-    margin-top: 7rem;
+    margin-top: 1rem;
     font-family: var(--primary-font);
 }
 .ondc_data_left{
@@ -277,10 +277,10 @@ width:85%;
 .btn_data{
     font-size: var(--text-large);
     font-weight: 700;
-    line-height:43px;
     width:auto;
     margin:auto;
     text-align: center;
+    line-height:120%;
 }
 .ondc_btn{
     display: flex;
@@ -293,6 +293,7 @@ width: 180px;
 height: 48px;
 font-size: 16px;
 margin:auto;
+margin-top:0.5rem;
 /* padding-left: 15%; */
 }
 
@@ -327,7 +328,7 @@ margin:auto;
 
 .ondc_ul li{
     border-bottom: 1px solid rgba(	63, 66, 85, .3);
-    width:90%;
+    width:95%;
     height:29px;
     font-weight:600;
     font-size:var(--text-low-medium);
